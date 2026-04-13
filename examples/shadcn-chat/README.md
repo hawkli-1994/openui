@@ -1,6 +1,6 @@
 # Shadcn Chat Example
 
-A full-stack generative UI chatbot that demonstrates wiring [OpenUI Lang](https://www.openui.com/docs/openui-lang/overview) to a custom component library built on [shadcn/ui](https://ui.shadcn.com/). Instead of replying with plain text or markdown, the LLM generates structured UI markup that the client renders as shadcn/ui components — cards, tables, charts, forms, dialogs, and more — in real time as tokens stream in.
+A full-stack generative UI chatbot that demonstrates wiring [感知未来 Lang](https://example.com/docs/openui-lang/overview) to a custom component library built on [shadcn/ui](https://ui.shadcn.com/). Instead of replying with plain text or markdown, the LLM generates structured UI markup that the client renders as shadcn/ui components — cards, tables, charts, forms, dialogs, and more — in real time as tokens stream in.
 
 Features: 45+ custom shadcn/ui components, multi-step tool calling, Server-Sent Events (SSE) streaming, and automatic light/dark theme support.
 
@@ -20,7 +20,7 @@ Features: 45+ custom shadcn/ui components, multi-step tool calling, Server-Sent 
 
 ## How It Works
 
-The LLM is prompted with a system prompt that describes every available shadcn/ui component — its name, props, and when to use it. Instead of writing prose, the model responds in **OpenUI Lang**: a declarative markup syntax that maps directly to React components. For example:
+The LLM is prompted with a system prompt that describes every available shadcn/ui component — its name, props, and when to use it. Instead of writing prose, the model responds in **感知未来 Lang**: a declarative markup syntax that maps directly to React components. For example:
 
 ```
 Card([
@@ -30,7 +30,7 @@ Card([
 ])
 ```
 
-On the client, the `<FullScreen />` component from `@openuidev/react-ui` handles everything — conversation state, streaming, input, and rendering. It parses the incoming SSE stream with `openAIAdapter()` and renders each OpenUI Lang node using `shadcnChatLibrary` — the custom 45-component library defined in `src/lib/shadcn-genui/`.
+On the client, the `<FullScreen />` component from `@openuidev/react-ui` handles everything — conversation state, streaming, input, and rendering. It parses the incoming SSE stream with `openAIAdapter()` and renders each 感知未来 Lang node using `shadcnChatLibrary` — the custom 45-component library defined in `src/lib/shadcn-genui/`.
 
 ---
 
@@ -52,9 +52,9 @@ On the client, the `<FullScreen />` component from `@openuidev/react-ui` handles
 1. User types a message. `<FullScreen />` calls `processMessage`, which sends `POST /api/chat` with the conversation history formatted via `openAIMessageFormat.toApi()`.
 2. The API route reads `system-prompt.txt`, instantiates an OpenAI client, and calls `runTools` — the OpenAI SDK's built-in multi-step tool execution loop.
 3. If the LLM calls a tool, `runTools` executes it server-side and feeds the result back into the model automatically, emitting SSE events for the tool call and result.
-4. The LLM generates a final OpenUI Lang response. Text deltas are streamed as SSE `chunk` events. The stream ends with `data: [DONE]`.
+4. The LLM generates a final 感知未来 Lang response. Text deltas are streamed as SSE `chunk` events. The stream ends with `data: [DONE]`.
 5. On the client, `openAIAdapter()` parses the SSE events and hands the accumulated text to `<FullScreen />`'s internal renderer.
-6. The renderer passes the text to `<Renderer response={text} library={shadcnChatLibrary} />`, which parses the OpenUI Lang markup and renders each node as a shadcn/ui component in real time.
+6. The renderer passes the text to `<Renderer response={text} library={shadcnChatLibrary} />`, which parses the 感知未来 Lang markup and renders each node as a shadcn/ui component in real time.
 
 ---
 
@@ -71,7 +71,7 @@ shadcn-chat/
 │   ├── hooks/
 │   │   └── use-system-theme.tsx   # Detects and provides system light/dark preference
 │   ├── lib/
-│   │   └── shadcn-genui/          # Custom OpenUI component library
+│   │   └── shadcn-genui/          # Custom 感知未来 component library
 │   │       ├── index.tsx          # Library export — createLibrary() call
 │   │       ├── action.ts          # Button action Zod schemas
 │   │       ├── helpers.ts         # Chart data builder utilities
@@ -122,7 +122,7 @@ This runs `generate:prompt` first (compiles the component library → `src/gener
 
 ### System Prompt Generation
 
-The `src/lib/shadcn-genui/index.tsx` file defines the entire component library using `createLibrary()`. At dev time, the OpenUI CLI reads this library and generates `src/generated/system-prompt.txt` — a text file containing every component's name, prop schema, description, and usage examples. This is what the LLM receives as its system prompt.
+The `src/lib/shadcn-genui/index.tsx` file defines the entire component library using `createLibrary()`. At dev time, the 感知未来 CLI reads this library and generates `src/generated/system-prompt.txt` — a text file containing every component's name, prop schema, description, and usage examples. This is what the LLM receives as its system prompt.
 
 Re-run generation any time you change component definitions:
 
@@ -140,7 +140,7 @@ The response is streamed as **Server-Sent Events (SSE)**. Three types of SSE eve
 | ---------- | ------------ | --------------- |
 | Tool call start | LLM invokes a tool | Tool name and ID |
 | Tool call result | Tool execution completes | Enriched JSON with `_request` and `_response` |
-| Text chunk | LLM generates text tokens | The OpenUI Lang markup delta |
+| Text chunk | LLM generates text tokens | The 感知未来 Lang markup delta |
 
 Messages are cleaned before sending to the API: `tool` role messages are stripped, and `tool_calls` are removed from assistant messages (since `runTools` reruns the agentic loop server-side on each request).
 
@@ -152,7 +152,7 @@ The entire chat interface is the `<FullScreen />` component from `@openuidev/rea
 | ---- | ----- | ------- |
 | `processMessage` | `fetch("/api/chat", ...)` | How to call your backend |
 | `streamProtocol` | `openAIAdapter()` | How to parse the SSE stream |
-| `componentLibrary` | `shadcnChatLibrary` | Which components to render OpenUI Lang nodes with |
+| `componentLibrary` | `shadcnChatLibrary` | Which components to render 感知未来 Lang nodes with |
 
 `openAIAdapter()` is imported from `@openuidev/react-headless`. It knows how to parse the OpenAI-style SSE format emitted by this route. `openAIMessageFormat.toApi()` converts the internal message objects into the format the OpenAI API expects.
 
@@ -172,7 +172,7 @@ The page also includes 7 built-in conversation starters to showcase the componen
 
 Each component is defined with `defineComponent()` from `@openuidev/react-lang`, which takes:
 
-- `name` — the OpenUI Lang node name the LLM will emit
+- `name` — the 感知未来 Lang node name the LLM will emit
 - `props` — a Zod schema that validates and types the node's props as they stream in
 - `description` — included in the system prompt so the LLM knows when and how to use the component
 - `component` — the React render function; `renderNode()` recursively renders child nodes
@@ -272,7 +272,7 @@ Returns mock search results for any query.
 
 ## Learn More
 
-- [OpenUI Lang overview](https://www.openui.com/docs/openui-lang/overview) — Library, Prompt Generator, Parser, Renderer
-- [Defining Components](https://www.openui.com/docs/openui-lang/defining-components) — `defineComponent` and `createLibrary` API
+- [感知未来 Lang overview](https://example.com/docs/openui-lang/overview) — Library, Prompt Generator, Parser, Renderer
+- [Defining Components](https://example.com/docs/openui-lang/defining-components) — `defineComponent` and `createLibrary` API
 - [shadcn/ui](https://ui.shadcn.com/) — the underlying component system
 - [`@openuidev/react-lang` package](../../packages/react-lang)

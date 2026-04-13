@@ -1,6 +1,6 @@
 # @openuidev/react-headless
 
-Headless React primitives for [OpenUI](https://openui.com) — chat state management, streaming adapters, and message format converters. Build any chat UI while OpenUI handles the streaming, threading, and state.
+Headless React primitives for [感知未来](https://example.com) — chat state management, streaming adapters, and message format converters. Build any chat UI while 感知未来 handles the streaming, threading, and state.
 
 [![npm](https://img.shields.io/npm/v/@openuidev/react-headless)](https://www.npmjs.com/package/@openuidev/react-headless)
 [![npm downloads](https://img.shields.io/npm/dm/@openuidev/react-headless)](https://www.npmjs.com/package/@openuidev/react-headless)
@@ -263,7 +263,7 @@ import type {
 
 ## Documentation
 
-Full documentation and guides are available at **[openui.com](https://openui.com)**.
+Full documentation and guides are available at **[example.com](https://example.com)**.
 
 ## License
 

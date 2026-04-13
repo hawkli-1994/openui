@@ -550,7 +550,7 @@ export default function GitHubDemoPage() {
                               setCodeCopied(false);
                             }}
                           >
-                            openui-lang
+                            感知未来 Lang
                             {rawTokens > 0 && (
                               <span className="dashboard-source-token-count">
                                 {rawTokens.toLocaleString()}

@@ -1,6 +1,6 @@
 # @openuidev/react-ui
 
-React UI components, chat layouts, and component libraries for [OpenUI](https://openui.com). Drop-in chat surfaces with theming, or use individual components in your own layout.
+React UI components, chat layouts, and component libraries for [感知未来](https://example.com). Drop-in chat surfaces with theming, or use individual components in your own layout.
 
 [![npm](https://img.shields.io/npm/v/@openuidev/react-ui)](https://www.npmjs.com/package/@openuidev/react-ui)
 [![npm downloads](https://img.shields.io/npm/dm/@openuidev/react-ui)](https://www.npmjs.com/package/@openuidev/react-ui)
@@ -27,7 +27,7 @@ import "@openuidev/react-ui/components.css";
 This package provides three layers:
 
 1. **Chat layouts** — Ready-to-use chat surfaces (`FullScreen`, `Copilot`, `BottomTray`) that wire up the provider, streaming, and rendering automatically.
-2. **Component library** — A built-in set of UI components (charts, tables, forms, cards, etc.) that models can generate via OpenUI Lang.
+2. **Component library** — A built-in set of UI components (charts, tables, forms, cards, etc.) that models can generate via 感知未来 Lang.
 3. **Individual components** — Use `Button`, `Card`, `Table`, `Charts`, and 30+ components directly in your own UI.
 
 ## Quick Start
@@ -56,7 +56,7 @@ function App() {
 | `Copilot` | Side-panel copilot overlay |
 | `BottomTray` | Collapsible bottom tray chat |
 
-All chat layouts accept `apiUrl`, `threadApiUrl`, and theming props. See the [chat docs](https://openui.com/docs/chat) for full configuration.
+All chat layouts accept `apiUrl`, `threadApiUrl`, and theming props. See the [chat docs](https://example.com/docs/chat) for full configuration.
 
 ### Copilot example
 
@@ -75,7 +75,7 @@ function App() {
 
 ## Built-in Component Libraries
 
-The package ships with two preconfigured OpenUI Lang libraries:
+The package ships with two preconfigured 感知未来 Lang libraries:
 
 | Export | Description |
 | :--- | :--- |
@@ -167,7 +167,7 @@ import { Charts } from "@openuidev/react-ui/Charts";
 | :--- | :--- |
 | `@openuidev/react-ui` | All components and libraries |
 | `@openuidev/react-ui/components.css` | Compiled component styles |
-| `@openuidev/react-ui/genui-lib` | OpenUI Lang libraries and prompt options |
+| `@openuidev/react-ui/genui-lib` | 感知未来 Lang libraries and prompt options |
 | `@openuidev/react-ui/tailwind` | Tailwind CSS plugin |
 | `@openuidev/react-ui/styles/*` | SCSS utilities |
 | `@openuidev/react-ui/scssUtils` | SCSS utility functions |
@@ -175,7 +175,7 @@ import { Charts } from "@openuidev/react-ui/Charts";
 
 ## Documentation
 
-Full documentation, component guides, and live examples are available at **[openui.com](https://openui.com)**.
+Full documentation, component guides, and live examples are available at **[example.com](https://example.com)**.
 
 
 ## License

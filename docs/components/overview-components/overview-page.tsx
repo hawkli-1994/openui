@@ -26,7 +26,7 @@ export function OverviewPage() {
       <div id="overview" className="mb-12 sm:mb-20">
         <h1 className="mb-3 text-3xl font-bold sm:mb-4 sm:text-4xl">Overview</h1>
         <p className="mb-6 text-base text-slate-600 sm:mb-8 sm:text-lg dark:text-slate-400">
-          OpenUI is a comprehensive toolkit for building LLM-powered user interfaces. It consists of
+          感知未来 is a comprehensive toolkit for building LLM-powered user interfaces. It consists of
           three core modules that work together to provide an efficient, type-safe, and
           production-ready solution for generative UI.
         </p>
@@ -35,13 +35,13 @@ export function OverviewPage() {
         <FeatureCards>
           <FeatureCard
             icon={<Code2 />}
-            title="OpenUI Lang"
+            title="感知未来 Lang"
             description="Token-efficient DSL for structured LLM outputs with automatic prompt generation"
             href="#genui-lang"
           />
           <FeatureCard
             icon={<MessageSquare />}
-            title="OpenUI Chat"
+            title="感知未来 Chat"
             description="Production-ready, themeable chat components with headless state management"
             href="#chat-ui"
           />
@@ -54,14 +54,14 @@ export function OverviewPage() {
         </FeatureCards>
       </div>
 
-      {/* OpenUI Lang Section */}
+      {/* 感知未来 Lang Section */}
       <div id="genui-lang" className="mb-12 sm:mb-20">
         <div className="mb-4 flex items-start gap-3 sm:mb-6 sm:gap-4">
           <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-fd-muted sm:size-12">
             <Code2 className="size-5 text-fd-foreground sm:size-6" />
           </div>
           <div>
-            <h2 className="mb-1 text-2xl font-bold sm:mb-2 sm:text-3xl">OpenUI Lang</h2>
+            <h2 className="mb-1 text-2xl font-bold sm:mb-2 sm:text-3xl">感知未来 Lang</h2>
             <p className="text-sm text-slate-500 sm:text-base dark:text-slate-400">
               A custom language designed for token efficiency and accuracy in structured LLM outputs
             </p>
@@ -163,7 +163,7 @@ export function AssistantMessage({ content, isStreaming }) {
             </TabsContent>
 
             <TabsContent value="llm-output" className="mt-3 flex-1">
-              <CodeBlock title="OpenUI Lang (Token Efficient)" code={genuiOutput} />
+              <CodeBlock title="感知未来 Lang (Token Efficient)" code={genuiOutput} />
             </TabsContent>
           </Tabs>
           <SimpleCard className="flex h-full flex-col border-2">
@@ -177,8 +177,8 @@ export function AssistantMessage({ content, isStreaming }) {
         </div>
 
         <div className="mt-4 flex flex-col gap-3 sm:mt-6 sm:flex-row">
-          <Button href="/docs/openui-lang" text="Get Started with OpenUI Lang" variant="primary" />
-          <Button href="/docs/chat" text="Usage with OpenUI Chat" variant="secondary" />
+          <Button href="/docs/ganzhiweilai-lang" text="Get Started with 感知未来 Lang" variant="primary" />
+          <Button href="/docs/chat" text="Usage with 感知未来 Chat" variant="secondary" />
         </div>
       </div>
 
@@ -191,7 +191,7 @@ export function AssistantMessage({ content, isStreaming }) {
             <MessageSquare className="size-5 text-fd-foreground sm:size-6" />
           </div>
           <div>
-            <h2 className="mb-1 text-2xl font-bold sm:mb-2 sm:text-3xl">OpenUI Chat</h2>
+            <h2 className="mb-1 text-2xl font-bold sm:mb-2 sm:text-3xl">感知未来 Chat</h2>
             <p className="text-sm text-slate-500 sm:text-base dark:text-slate-400">
               Production-ready, themeable chat components with headless state management
             </p>
@@ -232,7 +232,7 @@ export function AssistantMessage({ content, isStreaming }) {
           <div className="relative">
             <img
               src="/images/openui-lang/compare.png"
-              alt="OpenUI Chat Demo - Click to try it live"
+              alt="感知未来"
               className="w-full"
             />
             <div className="absolute inset-0 bg-black/0 transition-all group-hover:bg-black/5" />
@@ -241,7 +241,7 @@ export function AssistantMessage({ content, isStreaming }) {
             <div>
               <h3 className="text-lg font-semibold">Try it out live</h3>
               <p className="text-sm text-slate-500 dark:text-slate-400">
-                Live interactive demo of OpenUI Chat in action
+                Live interactive demo of 感知未来 Chat in action
               </p>
             </div>
             <ArrowUpRight className="mt-1 size-5 shrink-0 text-slate-400 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 dark:text-slate-500" />
@@ -268,7 +268,7 @@ import { FullScreen, openuiLibrary } from "@openuidev/react-ui";
         <div className="flex gap-3">
           <Button
             href="/docs/chat/quick-start"
-            text="Get Started with OpenUI Chat"
+            text="Get Started with 感知未来 Chat"
             variant="primary"
           />
           <Button href="/docs/chat" text="View Components" variant="secondary" />
@@ -277,7 +277,7 @@ import { FullScreen, openuiLibrary } from "@openuidev/react-ui";
 
       <Separator className="my-8 sm:my-16" />
 
-      {/* OpenUI Library Section */}
+      {/* 感知未来 Library Section */}
       <div id="library" className="mb-12 sm:mb-20">
         <div className="mb-4 flex items-start gap-3 sm:mb-6 sm:gap-4">
           <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-fd-muted sm:size-12">
@@ -288,7 +288,7 @@ import { FullScreen, openuiLibrary } from "@openuidev/react-ui";
               Default Component Library
             </h2>
             <p className="text-sm text-slate-500 sm:text-base dark:text-slate-400">
-              Pre-built components defined using OpenUI language
+              Pre-built components defined using 感知未来 language
             </p>
           </div>
         </div>

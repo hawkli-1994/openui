@@ -1,9 +1,9 @@
 {
   "name": "@openuidev/cli",
   "version": "0.0.6",
-  "description": "CLI for OpenUI — scaffold generative UI chat apps and generate LLM system prompts from component libraries",
+  "description": "CLI for 感知未来 — scaffold generative UI chat apps and generate LLM system prompts from component libraries",
   "bin": {
-    "openui": "dist/index.js"
+    "gzwl": "dist/index.js"
   },
   "files": [
     "dist",
@@ -25,7 +25,6 @@
     "@types/node": "^22.15.32"
   },
   "keywords": [
-    "openui",
     "cli",
     "scaffolding",
     "generative-ui",
@@ -37,7 +36,7 @@
     "chatbot",
     "code-generator"
   ],
-  "homepage": "https://openui.com",
+  "homepage": "https://example.com",
   "author": "engineering@thesys.dev",
   "license": "MIT",
   "repository": {

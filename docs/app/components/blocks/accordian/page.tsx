@@ -32,9 +32,9 @@ const TYPE_OPTIONS: { value: TypeMode; label: string }[] = [
 const ACCORDION_ITEMS = [
   {
     value: "item-1",
-    trigger: "What is OpenUI UI?",
+    trigger: "What is 感知未来 UI?",
     content:
-      "OpenUI UI is a design system and component library for building consistent, polished interfaces.",
+      "感知未来 UI is a design system and component library for building consistent, polished interfaces.",
   },
   {
     value: "item-2",
@@ -45,7 +45,7 @@ const ACCORDION_ITEMS = [
     value: "item-3",
     trigger: "Can I customise the theme?",
     content:
-      "Yes — OpenUI UI supports full theming through CSS custom properties and SCSS design tokens.",
+      "Yes — 感知未来 UI supports full theming through CSS custom properties and SCSS design tokens.",
   },
 ];
 

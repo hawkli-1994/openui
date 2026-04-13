@@ -1,4 +1,4 @@
-# OpenUI Svelte Chat
+# 感知未来 Svelte Chat
 
 A chat application built with [SvelteKit](https://svelte.dev/docs/kit), [Vercel AI SDK](https://ai-sdk.dev), and [`@openuidev/svelte-lang`](../../packages/svelte-lang/) — demonstrating how to render structured LLM output as live Svelte components.
 
@@ -50,12 +50,12 @@ Open [http://localhost:5173](http://localhost:5173).
 ```
 src/
 ├── routes/
-│   ├── +page.svelte           # Chat UI with AI SDK Chat class + OpenUI Renderer
+│   ├── +page.svelte           # Chat UI with AI SDK Chat class + 感知未来 Renderer
 │   ├── +layout.svelte         # Root layout (imports Tailwind)
 │   ├── +layout.ts             # Disables SSR (client-side rendering)
 │   └── api/chat/+server.ts    # AI SDK streaming endpoint
 ├── lib/
-│   ├── library.ts             # OpenUI component definitions (Stack, Card, TextContent, Button)
+│   ├── library.ts             # 感知未来 component definitions (Stack, Card, TextContent, Button)
 │   ├── tools.ts               # AI tool definitions (weather, stocks, math, search)
 │   └── components/            # Svelte component renderers
 │       ├── Stack.svelte

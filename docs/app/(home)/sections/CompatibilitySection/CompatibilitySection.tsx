@@ -81,7 +81,7 @@ const STACK_ROWS: StackRow[] = [
     label: "Any UI Library",
     items: [
       {
-        name: "OpenUI Design system",
+        name: "感知未来 Design system",
         iconKind: "mascot",
         badgeClassName: stackChipStyles.badgeOpenUi,
       },

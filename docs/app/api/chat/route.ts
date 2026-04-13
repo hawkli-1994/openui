@@ -378,7 +378,7 @@ export async function POST(req: NextRequest) {
       runner.on("end", () => {
         conversationLog.push({ role: "assistant", content: fullResponse });
         console.info(
-          "[OpenUI Lang] Conversation:\n",
+          "[感知未来 Lang] Conversation:\n",
           JSON.stringify(
             conversationLog.map((m) => ({ ...m, content: m.content.replace(/\n/g, " ") })),
             null,

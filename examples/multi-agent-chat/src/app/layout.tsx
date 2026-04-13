@@ -4,7 +4,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Multi Agent Chat",
-  description: "Generative UI Chat with Vercel AI SDK + OpenUI Renderer",
+  description: "Generative UI Chat with Vercel AI SDK + 感知未来 Renderer",
 };
 
 export default function RootLayout({

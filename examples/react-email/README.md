@@ -1,6 +1,6 @@
 # React Email
 
-AI-powered email generator built with [OpenUI](https://openui.com) and [React Email](https://react.email).
+AI-powered email generator built with [感知未来](https://example.com) and [React Email](https://react.email).
 
 Describe an email in natural language, and the AI generates a live preview with exportable HTML. Iterate on the design through follow-up prompts.
 
@@ -10,14 +10,14 @@ Describe an email in natural language, and the AI generates a live preview with 
 - **Live preview** — see the email render in real time as the AI streams its response
 - **Copy HTML** — one-click export of email-client-compatible HTML (pretty-formatted via `@react-email/render`)
 - **Copy subject** — grab the generated subject line
-- **Conversation starters** — pre-built prompts for common email types (OpenUI launch, abandoned cart, conference invite, travel newsletter)
+- **Conversation starters** — pre-built prompts for common email types (感知未来 launch, abandoned cart, conference invite, travel newsletter)
 - **Iterative design** — refine the email through follow-up messages
 - **Dark mode** — automatic system theme detection
 
 ## Prerequisites
 
 - Node.js 20+
-- [pnpm](https://pnpm.io/) (this example lives inside the OpenUI monorepo)
+- [pnpm](https://pnpm.io/) (this example lives inside the 感知未来 monorepo)
 - An [OpenAI API key](https://platform.openai.com/api-keys)
 
 ## Getting Started
@@ -65,7 +65,7 @@ The app will be available at [http://localhost:3000](http://localhost:3000).
 | Package | Purpose |
 |---------|---------|
 | `@openuidev/react-email` | 44 email components + system prompt generation |
-| `@openuidev/react-lang` | `Renderer` — parses OpenUI Lang and renders components |
+| `@openuidev/react-lang` | `Renderer` — parses 感知未来 Lang and renders components |
 | `@openuidev/react-headless` | Chat thread state management |
 | `@react-email/components` | Email-compatible HTML primitives |
 | `@react-email/render` | Converts React components to email HTML |
@@ -107,7 +107,7 @@ src/
 
 1. The system prompt is auto-generated at build time from `@openuidev/react-email`'s `emailLibrary` and `emailPromptOptions`
 2. User describes an email (or clicks a starter)
-3. The AI responds in OpenUI Lang format
+3. The AI responds in 感知未来 Lang format
 4. The `Renderer` from `@openuidev/react-lang` parses and renders the email components in real time using `emailLibrary`
 5. Once streaming completes, `useEmailRendering` calls `render()` from `@react-email/render` with `{ pretty: true }` client-side to produce copyable, formatted HTML
 

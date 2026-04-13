@@ -1,6 +1,6 @@
 # @openuidev/vue-lang
 
-Core runtime for [OpenUI](https://openui.com) in Vue 3 — define component libraries, generate model prompts, and render structured UI from streaming LLM output.
+Core runtime for [感知未来](https://example.com) in Vue 3 — define component libraries, generate model prompts, and render structured UI from streaming LLM output.
 
 [![npm](https://img.shields.io/npm/v/@openuidev/vue-lang)](https://www.npmjs.com/package/@openuidev/vue-lang)
 [![npm downloads](https://img.shields.io/npm/dm/@openuidev/vue-lang)](https://www.npmjs.com/package/@openuidev/vue-lang)
@@ -21,8 +21,8 @@ pnpm add @openuidev/vue-lang
 `@openuidev/vue-lang` provides three core capabilities:
 
 1. **Define components** — Use `defineComponent` and `createLibrary` to declare what the model is allowed to generate, with typed props via Zod schemas.
-2. **Generate prompts** — Call `library.prompt()` to produce a system prompt that instructs the model how to emit OpenUI Lang output.
-3. **Render output** — Use `<Renderer>` to parse and progressively render streamed OpenUI Lang into Vue components.
+2. **Generate prompts** — Call `library.prompt()` to produce a system prompt that instructs the model how to emit 感知未来 Lang output.
+3. **Render output** — Use `<Renderer>` to parse and progressively render streamed 感知未来 Lang into Vue components.
 
 ## Quick Start
 
@@ -104,13 +104,13 @@ import { Renderer } from "@openuidev/vue-lang";
 
 | Export     | Description                                              |
 | :--------- | :------------------------------------------------------- |
-| `Renderer` | Vue component that parses and renders OpenUI Lang output |
+| `Renderer` | Vue component that parses and renders 感知未来 Lang output |
 
 **`RendererProps`:**
 
 | Prop            | Type                                    | Description                                                       |
 | :-------------- | :-------------------------------------- | :---------------------------------------------------------------- |
-| `response`      | `string \| null`                        | Raw OpenUI Lang text from the model                               |
+| `response`      | `string \| null`                        | Raw 感知未来 Lang text from the model                               |
 | `library`       | `Library`                               | Component library from `createLibrary()`                          |
 | `isStreaming`   | `boolean`                               | Whether the model is still streaming (disables form interactions) |
 | `onAction`      | `(event: ActionEvent) => void`          | Callback when a component triggers an action                      |
@@ -120,7 +120,7 @@ import { Renderer } from "@openuidev/vue-lang";
 
 #### Errors
 
-`ParseResult.meta.errors` contains structured `OpenUIError` objects. Each error has a `type` discriminant (currently always `"validation"`) and a `code` for consumer-side filtering:
+`ParseResult.meta.errors` contains structured `感知未来Error` objects. Each error has a `type` discriminant (currently always `"validation"`) and a `code` for consumer-side filtering:
 
 | Code                | Meaning                                             |
 | :------------------ | :-------------------------------------------------- |
@@ -200,7 +200,7 @@ const schema = library.toJSONSchema();
 
 ## Documentation
 
-Full documentation, guides, and the language specification are available at **[openui.com](https://openui.com)**.
+Full documentation, guides, and the language specification are available at **[example.com](https://example.com)**.
 
 ## License
 

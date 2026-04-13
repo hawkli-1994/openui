@@ -26,7 +26,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "OpenUI Design System",
+  title: "感知未来 Design System",
   description: "Foundation, Blocks, and Compose documentation",
 };
 

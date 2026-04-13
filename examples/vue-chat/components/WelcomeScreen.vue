@@ -7,7 +7,7 @@ const emit = defineEmits<{ send: [text: string] }>();
   <div class="flex flex-col items-center justify-center h-full px-4">
     <div class="text-center mb-8">
       <h2 class="text-2xl font-semibold text-zinc-900 dark:text-zinc-100 mb-2">
-        Welcome to OpenUI Chat
+        Welcome to 感知未来 Chat
       </h2>
       <p class="text-zinc-500 dark:text-zinc-400">
         Ask anything — responses are rendered as structured UI components.

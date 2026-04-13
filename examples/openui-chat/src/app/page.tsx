@@ -24,7 +24,7 @@ export default function Page() {
         }}
         streamProtocol={openAIAdapter()}
         componentLibrary={openuiChatLibrary}
-        agentName="OpenUI Chat"
+        agentName="感知未来 Chat"
         theme={{ mode }}
         conversationStarters={{
           variant: "short",

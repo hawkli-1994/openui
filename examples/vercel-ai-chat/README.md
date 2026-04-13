@@ -1,6 +1,6 @@
 # Vercel AI Chat Example
 
-A full-stack generative UI chatbot built with the [Vercel AI SDK](https://ai-sdk.dev/) and [OpenUI Lang](https://www.openui.com/docs/openui-lang/overview). Instead of replying with plain text or markdown, the LLM generates structured UI markup that the client renders as interactive React components — cards, tables, charts, forms, and more — in real time as tokens stream in.
+A full-stack generative UI chatbot built with the [Vercel AI SDK](https://ai-sdk.dev/) and [感知未来 Lang](https://example.com/docs/openui-lang/overview). Instead of replying with plain text or markdown, the LLM generates structured UI markup that the client renders as interactive React components — cards, tables, charts, forms, and more — in real time as tokens stream in.
 
 Features: multi-step tool calling, persistent conversation threads (localStorage), collapsible sidebar, and automatic light/dark theme support.
 
@@ -20,7 +20,7 @@ Features: multi-step tool calling, persistent conversation threads (localStorage
 
 ## How It Works
 
-The LLM is prompted with a system prompt that describes a set of UI components — their names, props, and when to use them. Instead of writing prose, the model responds in **OpenUI Lang**: a declarative markup syntax that maps directly to React components. For example:
+The LLM is prompted with a system prompt that describes a set of UI components — their names, props, and when to use them. Instead of writing prose, the model responds in **感知未来 Lang**: a declarative markup syntax that maps directly to React components. For example:
 
 ```
 Card([
@@ -44,7 +44,7 @@ The Vercel AI SDK handles the streaming transport on both ends:
 │   Browser                          │  HTTP  │   Next.js API Route                │
 │                                    │ ──────►│                                    │
 │  • useChat manages message state   │        │  • Loads system-prompt.txt         │
-│  • <Renderer /> parses OpenUI Lang │◄────── │  • Calls LLM with streamText       │
+│  • <Renderer /> parses 感知未来 Lang │◄────── │  • Calls LLM with streamText       │
 │  • openuiChatLibrary renders UI    │ stream │  • Executes tools server-side      │
 │  • Sidebar with thread history     │        │  • Returns toUIMessageStreamResponse│
 └────────────────────────────────────┘        └────────────────────────────────────┘
@@ -55,7 +55,7 @@ The Vercel AI SDK handles the streaming transport on both ends:
 1. User types a message. `useChat` sends `POST /api/chat` with the full conversation history.
 2. The API route reads `system-prompt.txt`, calls `streamText` with the model, system prompt, messages, and tool definitions.
 3. If the LLM calls a tool, the Vercel AI SDK executes it server-side and feeds the result back into the model. This loop runs up to 5 steps (`stopWhen: stepCountIs(5)`).
-4. The LLM generates a final OpenUI Lang response and it streams back via `toUIMessageStreamResponse()`.
+4. The LLM generates a final 感知未来 Lang response and it streams back via `toUIMessageStreamResponse()`.
 5. `useChat` accumulates the streaming text and passes it to `<AssistantMessage />`.
 6. `<AssistantMessage />` feeds the accumulated text into `<Renderer response={text} library={openuiChatLibrary} isStreaming={isStreaming} />`.
 7. `<Renderer />` parses the markup progressively and renders live React components as each token arrives.
@@ -88,7 +88,7 @@ vercel-ai-chat/
 │   ├── lib/
 │   │   ├── tools.ts               # Four mock tool definitions (Vercel AI SDK format)
 │   │   └── thread-store.ts        # Read/write threads to localStorage
-│   ├── library.ts                 # OpenUI library export for prompt generation
+│   ├── library.ts                 # 感知未来 library export for prompt generation
 │   └── generated/
 │       └── system-prompt.txt      # Auto-generated — do not edit manually
 └── package.json
@@ -137,7 +137,7 @@ This runs `generate:prompt` first (compiles `src/library.ts` → `src/generated/
 
 ### System Prompt Generation
 
-`src/library.ts` re-exports `openuiChatLibrary` (as `library`) and `openuiChatPromptOptions` (as `promptOptions`) from `@openuidev/react-ui/genui-lib`. At dev time, the OpenUI CLI reads this file and generates `src/generated/system-prompt.txt` — a text file containing every component's name, prop schema, description, and usage examples. This is what the LLM receives as the system prompt, teaching it which components exist and how to use them.
+`src/library.ts` re-exports `openuiChatLibrary` (as `library`) and `openuiChatPromptOptions` (as `promptOptions`) from `@openuidev/react-ui/genui-lib`. At dev time, the 感知未来 CLI reads this file and generates `src/generated/system-prompt.txt` — a text file containing every component's name, prop schema, description, and usage examples. This is what the LLM receives as the system prompt, teaching it which components exist and how to use them.
 
 Re-run generation any time you change component definitions:
 
@@ -152,7 +152,7 @@ The API route uses the Vercel AI SDK's `streamText` with five arguments:
 | Argument | Value | Purpose |
 | -------- | ----- | ------- |
 | `model` | `openai("gpt-5.4")` | The LLM to call |
-| `system` | contents of `system-prompt.txt` | Teaches the model OpenUI Lang and the available components |
+| `system` | contents of `system-prompt.txt` | Teaches the model 感知未来 Lang and the available components |
 | `messages` | conversation history from client | The full thread so far |
 | `tools` | four tool definitions | Functions the LLM can call mid-generation |
 | `stopWhen` | `stepCountIs(5)` | Stops the tool-call loop after 5 steps maximum |
@@ -265,6 +265,6 @@ Returns mock search results for any query.
 
 ## Learn More
 
-- [OpenUI Lang overview](https://www.openui.com/docs/openui-lang/overview) — Library, Prompt Generator, Parser, Renderer
+- [感知未来 Lang overview](https://example.com/docs/openui-lang/overview) — Library, Prompt Generator, Parser, Renderer
 - [Vercel AI SDK docs](https://ai-sdk.dev/) — `streamText`, `useChat`, `tool()`
 - [`@openuidev/react-lang` package](../../packages/react-lang)

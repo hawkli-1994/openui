@@ -24,16 +24,16 @@ const STEPS: StepsAccordionItem[] = [
   },
   {
     number: 2,
-    title: "OpenUI generates system prompt",
+    title: "感知未来 generates system prompt",
     description:
-      "Generate a system prompt from your library with the OpenUI CLI or library.prompt() and send it to the LLM.",
+      "Generate a system prompt from your library with the 感知未来 CLI or library.prompt() and send it to the LLM.",
     details: [],
     Illustration: OpenUiGeneratesSchema,
   },
   {
     number: 3,
-    title: "LLM responds in OpenUI Lang",
-    description: "The model returns token-efficient, line-oriented OpenUI Lang (not markdown).",
+    title: "LLM responds in 感知未来 Lang",
+    description: "The model returns token-efficient, line-oriented 感知未来 Lang (not markdown).",
     details: [],
     Illustration: LlmRespondsInOpenUiLang,
   },

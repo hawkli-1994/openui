@@ -116,7 +116,7 @@ const BottomTrayStory = ({
         <Trigger onClick={() => setIsOpen(!isOpen)} isOpen={isOpen} />
 
         {/* Container is controlled externally */}
-        <Container logoUrl={logoUrl} agentName="OpenUI Assistant" isOpen={isOpen}>
+        <Container logoUrl={logoUrl} agentName="感知未来 Assistant" isOpen={isOpen}>
           <ThreadContainer>
             <Header onMinimize={() => setIsOpen(false)} />
             <ScrollArea>
@@ -324,12 +324,12 @@ const WelcomeScreenStory = ({
       >
         <Trigger onClick={() => setIsOpen(!isOpen)} isOpen={isOpen} />
 
-        <Container logoUrl={logoUrl} agentName="OpenUI Assistant" isOpen={isOpen}>
+        <Container logoUrl={logoUrl} agentName="感知未来 Assistant" isOpen={isOpen}>
           <ThreadContainer>
             <Header onMinimize={() => setIsOpen(false)} />
 
             <WelcomeScreen
-              title="Hi, I'm OpenUI Assistant"
+              title="Hi, I'm 感知未来 Assistant"
               description="I can help you with questions about your account, products, and more."
               image={{ url: logoUrl }}
             />
@@ -411,7 +411,7 @@ const CustomWelcomeScreenStory = ({
       >
         <Trigger onClick={() => setIsOpen(!isOpen)} isOpen={isOpen} />
 
-        <Container logoUrl={logoUrl} agentName="OpenUI Assistant" isOpen={isOpen}>
+        <Container logoUrl={logoUrl} agentName="感知未来 Assistant" isOpen={isOpen}>
           <ThreadContainer>
             <Header onMinimize={() => setIsOpen(false)} />
 

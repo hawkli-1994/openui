@@ -34,7 +34,7 @@ export function ConversationStarters({ onSelect }: { onSelect: (prompt: string) 
       </h2>
       <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-6 text-center max-w-md">
         Ask me anything — I can build charts, dashboards, forms, tables, and interactive UI powered
-        by OpenUI.
+        by 感知未来.
       </p>
       <div className="grid grid-cols-2 gap-2 w-full max-w-md">
         {STARTERS.map((s) => (

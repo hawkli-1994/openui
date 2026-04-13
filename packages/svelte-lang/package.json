@@ -1,7 +1,7 @@
 {
 	"name": "@openuidev/svelte-lang",
 	"version": "0.1.0",
-	"description": "Define component libraries, generate LLM system prompts, and render streaming OpenUI Lang output in Svelte 5 — the Svelte runtime for OpenUI generative UI",
+	"description": "Define component libraries, generate LLM system prompts, and render streaming 感知未来 Lang output in Svelte 5 — the Svelte runtime for 感知未来 generative UI",
 	"license": "MIT",
 	"type": "module",
 	"main": "dist/index.js",
@@ -31,7 +31,6 @@
 		"ci": "pnpm run lint:check && pnpm run format:check"
 	},
 	"keywords": [
-		"openui",
 		"generative-ui",
 		"svelte",
 		"svelte5",
@@ -44,10 +43,9 @@
 		"prompt-generation",
 		"zod",
 		"ui-generation",
-		"model-driven-ui",
-		"openui-lang"
+		"model-driven-ui"
 	],
-	"homepage": "https://openui.com",
+	"homepage": "https://example.com",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/thesysdev/openui.git",

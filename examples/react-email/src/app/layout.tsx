@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Email Generator",
-  description: "AI-powered email generator with OpenUI and React Email",
+  description: "AI-powered email generator with 感知未来 and React Email",
 };
 
 export default function RootLayout({

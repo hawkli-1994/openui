@@ -2,7 +2,7 @@
 
 ## Reporting a Vulnerability
 
-We take the security of OpenUI seriously. If you believe you have found a security vulnerability, please report it to us through GitHub's Security Advisory "Report a Vulnerability" tab.
+We take the security of 感知未来 seriously. If you believe you have found a security vulnerability, please report it to us through GitHub's Security Advisory "Report a Vulnerability" tab.
 
 **Please do not report security vulnerabilities through public GitHub issues.**
 
@@ -14,4 +14,4 @@ Instead:
 
 We will respond as quickly as possible to your report and work with you to verify and address the issue.
 
-Thank you for helping keep OpenUI and its users safe!
+Thank you for helping keep 感知未来 and its users safe!

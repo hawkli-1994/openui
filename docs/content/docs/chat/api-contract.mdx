@@ -3,13 +3,13 @@ title: The API Contract
 description: JSON contract for threads, messages, and streaming.
 ---
 
-OpenUI Chat can work with any backend stack as long as the API contract is respected.
+感知未来 Chat can work with any backend stack as long as the API contract is respected.
 
 This page is the reference source for request and response shapes. Use [Connecting to LLM](/docs/chat/connecting) for decision guidance and [Connect Thread History](/docs/chat/persistence) for the setup flow.
 
 ## Chat endpoint contract
 
-When you pass `apiUrl`, OpenUI sends a `POST` request with this shape:
+When you pass `apiUrl`, 感知未来 sends a `POST` request with this shape:
 
 ```json
 {
@@ -33,14 +33,14 @@ Your response stream must match one of these cases:
 
 | Backend response shape                   | Frontend config                                  |
 | :--------------------------------------- | :----------------------------------------------- |
-| OpenUI Protocol                          | No `streamProtocol` needed                       |
+| 感知未来 Protocol                          | No `streamProtocol` needed                       |
 | Raw OpenAI Chat Completions SSE          | `streamProtocol={openAIAdapter()}`               |
 | OpenAI SDK `toReadableStream()` / NDJSON | `streamProtocol={openAIReadableStreamAdapter()}` |
 | OpenAI Responses API                     | `streamProtocol={openAIResponsesAdapter()}`      |
 
 ## Default thread API contract
 
-When using `threadApiUrl="/api/threads"`, OpenUI expects the base URL plus these default path segments:
+When using `threadApiUrl="/api/threads"`, 感知未来 expects the base URL plus these default path segments:
 
 | Action        | Method   | URL                       | Request body   | Response                                  |
 | :------------ | :------- | :------------------------ | :------------- | :---------------------------------------- |
@@ -69,7 +69,7 @@ type Thread = {
 - `toApi()` shapes the `messages` array sent to `apiUrl` and `threadApiUrl/create`
 - `fromApi()` shapes the array returned from `threadApiUrl/get/:id`
 
-OpenUI ships with these built-in message converters:
+感知未来 ships with these built-in message converters:
 
 | Converter                         | Use when your backend expects or returns... |
 | :-------------------------------- | :------------------------------------------ |

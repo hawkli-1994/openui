@@ -21,7 +21,7 @@ import { FullScreen } from "@openuidev/react-ui";
 <FullScreen apiUrl="/api/chat" agentName="Assistant" />;
 ```
 
-With `apiUrl`, OpenUI sends the message history to your endpoint for you. If your backend expects a different message format, configure `messageFormat`. If you need custom headers, extra fields, or a different request body, use `processMessage` instead.
+With `apiUrl`, 感知未来 sends the message history to your endpoint for you. If your backend expects a different message format, configure `messageFormat`. If you need custom headers, extra fields, or a different request body, use `processMessage` instead.
 
 ## `processMessage`
 
@@ -61,11 +61,11 @@ import { openuiLibrary } from "@openuidev/react-ui/genui-lib";
 
 ## `streamProtocol`
 
-`streamProtocol` tells OpenUI how to parse the response stream. By default, OpenUI expects the OpenUI Protocol, so only set this when your backend streams a different format.
+`streamProtocol` tells 感知未来 how to parse the response stream. By default, 感知未来 expects the 感知未来 Protocol, so only set this when your backend streams a different format.
 
 | Backend output                           | Frontend config                                  |
 | :--------------------------------------- | :----------------------------------------------- |
-| OpenUI Protocol                          | No adapter required                              |
+| 感知未来 Protocol                          | No adapter required                              |
 | Raw OpenAI Chat Completions SSE          | `streamProtocol={openAIAdapter()}`               |
 | OpenAI SDK `toReadableStream()` / NDJSON | `streamProtocol={openAIReadableStreamAdapter()}` |
 | OpenAI Responses API                     | `streamProtocol={openAIResponsesAdapter()}`      |
@@ -110,7 +110,7 @@ Once you know what each prop does, the decision becomes:
 
 1. Start with `apiUrl`.
 2. Switch to `processMessage` only if you need auth, extra fields, dynamic URLs, or request conversion.
-3. Add `streamProtocol` only if your backend does not stream the default OpenUI Protocol.
+3. Add `streamProtocol` only if your backend does not stream the default 感知未来 Protocol.
 4. Add `messageFormat` only if your backend expects or returns a non-default message shape.
 
 {/* add visual: flow-chart showing the decision between apiUrl and processMessage, then mapping backend stream output to the correct streamProtocol adapter and messageFormat choice */}

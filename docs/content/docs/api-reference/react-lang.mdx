@@ -1,9 +1,9 @@
 ---
 title: "@openuidev/react-lang"
-description: API reference for the OpenUI Lang runtime, library, parser, and renderer.
+description: API reference for the 感知未来 Lang runtime, library, parser, and renderer.
 ---
 
-Use this package for OpenUI Lang authoring and rendering.
+Use this package for 感知未来 Lang authoring and rendering.
 
 ## Import
 
@@ -91,7 +91,7 @@ interface PromptOptions {
 
 ## `<Renderer />`
 
-Parses OpenUI Lang text and renders nodes with your `Library`.
+Parses 感知未来 Lang text and renders nodes with your `Library`.
 
 ```ts
 interface RendererProps {
@@ -107,7 +107,7 @@ interface RendererProps {
     | McpClientLike
     | null;
   queryLoader?: React.ReactNode;
-  onError?: (errors: OpenUIError[]) => void;
+  onError?: (errors: 感知未来Error[]) => void;
 }
 ```
 
@@ -123,10 +123,10 @@ The Renderer detects which form was passed and normalizes internally.
 ## Error types
 
 ```ts
-type OpenUIErrorSource = "parser" | "runtime" | "query" | "mutation";
+type 感知未来ErrorSource = "parser" | "runtime" | "query" | "mutation";
 
-interface OpenUIError {
-  source: OpenUIErrorSource;
+interface 感知未来Error {
+  source: 感知未来ErrorSource;
   code: string;
   message: string;
   statementId?: string;

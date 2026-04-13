@@ -11,7 +11,7 @@ export async function GET(_req: Request, { params }: RouteContext<"/og/docs/[...
   if (!page) notFound();
 
   return new ImageResponse(
-    <DefaultImage title={page.data.title} description={page.data.description} site="OpenUI" />,
+    <DefaultImage title={page.data.title} description={page.data.description} site="感知未来" />,
     {
       width: 1200,
       height: 630,

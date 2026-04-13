@@ -1,6 +1,6 @@
 # @openuidev/react-email
 
-React Email components for [OpenUI](https://openui.com) — API reference for the pre-built email templates library and prompt options, ready for LLM-driven email generation.
+React Email components for [感知未来](https://example.com) — API reference for the pre-built email templates library and prompt options, ready for LLM-driven email generation.
 
 [![npm](https://img.shields.io/npm/v/@openuidev/react-email)](https://www.npmjs.com/package/@openuidev/react-email)
 [![npm downloads](https://img.shields.io/npm/dm/@openuidev/react-email)](https://www.npmjs.com/package/@openuidev/react-email)
@@ -65,7 +65,7 @@ const html = await render(
 
 ## Documentation
 
-Full documentation, guides, and the language specification are available at **[openui.com](https://openui.com)**.
+Full documentation, guides, and the language specification are available at **[example.com](https://example.com)**.
 
 ## License
 

@@ -3,7 +3,7 @@ import { ThemeProvider } from "@/hooks/use-system-theme";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "OpenUI Chat",
+  title: "感知未来 Chat",
   description: "Generative UI Chat with OpenAI SDK",
 };
 

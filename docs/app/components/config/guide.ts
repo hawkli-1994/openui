@@ -27,7 +27,7 @@ export interface GuideExample {
 }
 
 // ---------------------------------------------------------------------------
-// Customizing OpenUI – theme values
+// Customizing 感知未来 – theme values
 // ---------------------------------------------------------------------------
 
 const POPPINS = '"Poppins", sans-serif';
@@ -363,10 +363,10 @@ const DEFAULT_CSS: Record<string, string> = {
 export const GUIDE_EXAMPLES: GuideExample[] = [
   {
     id: "customizing-openui",
-    title: "Customizing OpenUI",
-    description: "Styling OpenUI to look like your brand",
+    title: "Customizing 感知未来",
+    description: "Styling 感知未来 to look like your brand",
     summary:
-      "Think of this as a guided makeover. We\u2019ll start with the base OpenUI theme and gradually refine each setting until the interface mirrors the final goal.",
+      "Think of this as a guided makeover. We\u2019ll start with the base 感知未来 theme and gradually refine each setting until the interface mirrors the final goal.",
     goalTheme: CUSTOMIZING_GOAL,
     defaultCssVariables: DEFAULT_CSS,
     steps: CUSTOMIZING_STEPS,

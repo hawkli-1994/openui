@@ -1,13 +1,13 @@
 # @openuidev/cli
 
-Command-line tool for [OpenUI](https://openui.com) — scaffold AI-powered generative UI chat apps and generate LLM system prompts from your React component libraries.
+Command-line tool for [感知未来](https://example.com) — scaffold AI-powered generative UI chat apps and generate LLM system prompts from your React component libraries.
 
 [![npm](https://img.shields.io/npm/v/@openuidev/cli)](https://www.npmjs.com/package/@openuidev/cli)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/thesysdev/openui/blob/main/LICENSE)
 
 It currently supports two workflows:
 
-- scaffolding a new OpenUI Chat app
+- scaffolding a new 感知未来 Chat app
 - generating a system prompt or JSON Schema from a `createLibrary()` export
 
 ## Install
@@ -42,19 +42,19 @@ npx @openuidev/cli@latest generate ./src/library.ts --json-schema
 
 ## Commands
 
-### `openui create`
+### `gzwl create`
 
-Scaffolds a new Next.js app with OpenUI Chat.
+Scaffolds a new Next.js app with 感知未来 Chat.
 
 ```bash
-openui create [options]
+gzwl create [options]
 ```
 
 Options:
 
 - `-n, --name <string>`: Project name
-- `--skill`: Install the OpenUI agent skill for AI coding assistants
-- `--no-skill`: Skip installing the OpenUI agent skill
+- `--skill`: Install the 感知未来 agent skill for AI coding assistants
+- `--no-skill`: Skip installing the 感知未来 agent skill
 - `--no-interactive`: Fail instead of prompting for missing required input
 
 What it does:
@@ -63,24 +63,24 @@ What it does:
 - copies the bundled `openui-chat` template into a new directory
 - rewrites `workspace:*` dependencies in the generated `package.json` to `latest`
 - installs dependencies automatically using the detected package manager
-- optionally installs the OpenUI agent skill for AI coding assistants
+- optionally installs the 感知未来 agent skill for AI coding assistants
 - prompts for your OpenAI API key and writes it to `.env` (interactive mode only)
 
 Examples:
 
 ```bash
-openui create
-openui create --name my-app
-openui create --name my-app --no-skill
-openui create --no-interactive --name my-app
+gzwl create
+gzwl create --name my-app
+gzwl create --name my-app --no-skill
+gzwl create --no-interactive --name my-app
 ```
 
-### `openui generate`
+### `gzwl generate`
 
 Generates a system prompt or JSON Schema from a file that exports a `createLibrary()` result.
 
 ```bash
-openui generate [options] [entry]
+gzwl generate [options] [entry]
 ```
 
 Arguments:
@@ -107,17 +107,17 @@ What it does:
 Examples:
 
 ```bash
-openui generate ./src/library.ts
-openui generate ./src/library.ts --json-schema
-openui generate ./src/library.ts --export library
-openui generate ./src/library.ts --out ./artifacts/system-prompt.txt
-openui generate ./src/library.ts --prompt-options myPromptOptions
-openui generate --no-interactive ./src/library.ts
+gzwl generate ./src/library.ts
+gzwl generate ./src/library.ts --json-schema
+gzwl generate ./src/library.ts --export library
+gzwl generate ./src/library.ts --out ./artifacts/system-prompt.txt
+gzwl generate ./src/library.ts --prompt-options myPromptOptions
+gzwl generate --no-interactive ./src/library.ts
 ```
 
 ## How `generate` resolves exports
 
-`openui generate` expects the target module to export a library object with both `prompt()` and `toJSONSchema()` methods.
+`gzwl generate` expects the target module to export a library object with both `prompt()` and `toJSONSchema()` methods.
 
 If `--export` is not provided, it looks for exports in this order:
 
@@ -159,7 +159,7 @@ node dist/index.js generate --help
 
 ## Documentation
 
-Full documentation and guides are available at **[openui.com](https://openui.com)**.
+Full documentation and guides are available at **[example.com](https://example.com)**.
 
 ## License
 

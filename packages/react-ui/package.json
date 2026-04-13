@@ -162,7 +162,6 @@
     "vite": "^5.0.0"
   },
   "keywords": [
-    "openui",
     "react",
     "ui",
     "components",
@@ -183,7 +182,7 @@
     "recharts",
     "markdown"
   ],
-  "homepage": "https://openui.com",
+  "homepage": "https://example.com",
   "author": "engineering@thesys.dev",
   "repository": {
     "type": "git",

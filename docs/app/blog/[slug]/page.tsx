@@ -46,7 +46,7 @@ export default async function BlogPostPage(props: { params: Promise<{ slug: stri
           </article>
           <div className="mt-12 border-t pt-8">
             <PillLink
-              href="https://github.com/thesysdev/openui"
+              href="https://github.com/openui/openui"
               external
               className="inline-flex h-12 items-center gap-2 rounded-full bg-black px-5 text-[15px] font-medium text-white no-underline transition-colors duration-200 hover:bg-black/85 dark:bg-white dark:text-black dark:hover:bg-white/85"
             >

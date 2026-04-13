@@ -130,7 +130,7 @@ export const Default = {
         ];
       }}
     >
-      <Container logoUrl={logoUrl} agentName="OpenUI">
+      <Container logoUrl={logoUrl} agentName="感知未来">
         <SidebarContainer>
           <SidebarHeader>
             <NewChatButton />
@@ -187,7 +187,7 @@ export const WithThreadHeader = {
       updateThread={async (t: Thread) => t}
       loadThread={async () => []}
     >
-      <Container logoUrl={logoUrl} agentName="OpenUI">
+      <Container logoUrl={logoUrl} agentName="感知未来">
         <SidebarContainer>
           <SidebarHeader>
             <NewChatButton />
@@ -248,7 +248,7 @@ export const WithConversationStarter = {
       updateThread={async (t: Thread) => t}
       loadThread={async () => []}
     >
-      <Container logoUrl={logoUrl} agentName="OpenUI">
+      <Container logoUrl={logoUrl} agentName="感知未来">
         <SidebarContainer>
           <SidebarHeader>
             <NewChatButton />
@@ -300,7 +300,7 @@ export const LongVariant = {
       updateThread={async (t: Thread) => t}
       loadThread={async () => []}
     >
-      <Container logoUrl={logoUrl} agentName="OpenUI">
+      <Container logoUrl={logoUrl} agentName="感知未来">
         <SidebarContainer>
           <SidebarHeader>
             <NewChatButton />
@@ -352,7 +352,7 @@ export const WithWelcomeScreen = {
       updateThread={async (t: Thread) => t}
       loadThread={async () => []}
     >
-      <Container logoUrl={logoUrl} agentName="OpenUI Assistant">
+      <Container logoUrl={logoUrl} agentName="感知未来 Assistant">
         <SidebarContainer>
           <SidebarHeader>
             <NewChatButton />
@@ -374,7 +374,7 @@ export const WithWelcomeScreen = {
             }
           />
           <WelcomeScreen
-            title="Hi, I'm OpenUI Assistant"
+            title="Hi, I'm 感知未来 Assistant"
             description="I can help you with questions about your account, products, and more."
             image={{ url: logoUrl }}
             starters={SAMPLE_STARTERS}
@@ -411,7 +411,7 @@ export const WithCustomWelcomeScreen = {
       updateThread={async (t: Thread) => t}
       loadThread={async () => []}
     >
-      <Container logoUrl={logoUrl} agentName="OpenUI Assistant">
+      <Container logoUrl={logoUrl} agentName="感知未来 Assistant">
         <SidebarContainer>
           <SidebarHeader>
             <NewChatButton />

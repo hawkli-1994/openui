@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
       Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
       "Content-Type": "application/json",
       "HTTP-Referer": `${BASE_URL}/playground`,
-      "X-Title": "OpenUI Playground",
+      "X-Title": "感知未来 Playground",
     },
     body: JSON.stringify({
       model,
@@ -73,7 +73,7 @@ export async function POST(req: NextRequest) {
     }
     conversationLog.push({ role: "assistant", content: fullResponse });
     console.info(
-      "[OpenUI Lang] Conversation:\n",
+      "[感知未来 Lang] Conversation:\n",
       JSON.stringify(
         conversationLog.map((m) => ({ ...m, content: m.content.replace(/\n/g, " ") })),
         null,

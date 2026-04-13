@@ -9,7 +9,7 @@ import styles from "./HeroSection.module.css";
 // CTAs
 const primaryCTA = "npx @openuidev/cli@latest create";
 const secondaryCTA = "Try Playground";
-const architectureHref = "/docs/openui-lang/how-it-works";
+const architectureHref = "/docs/ganzhiweilai-lang/how-it-works";
 const DESKTOP_HERO_IMAGE = {
   light: "/homepage/hero-web.png",
   dark: "/homepage/hero-web-dark.png",
@@ -85,7 +85,7 @@ function AnnouncementBanner({ className = "" }: { className?: string }) {
       <div className={`${styles.heroBanner} ${styles.heroBannerDesktop} ${className}`.trim()}>
         <span className={styles.heroBannerLabel}>
           <span className={styles.heroBannerBadge}>New</span>
-          <span>We&apos;re introducing OpenUI Lang v0.5</span>
+          <span>We&apos;re introducing 感知未来 Lang v0.5</span>
         </span>
         <div className={styles.heroBannerActions}>
           <Link
@@ -106,7 +106,7 @@ function AnnouncementBanner({ className = "" }: { className?: string }) {
       >
         <span className={styles.heroBannerLabel}>
           <span className={styles.heroBannerBadge}>New</span>
-          <span>Introducing OpenUI Lang v0.5</span>
+          <span>Introducing 感知未来 Lang v0.5</span>
         </span>
       </Link>
     </>
@@ -116,7 +116,7 @@ function AnnouncementBanner({ className = "" }: { className?: string }) {
 function GitHubBanner({ className = "" }: { className?: string }) {
   return (
     <a
-      href="https://github.com/thesysdev/openui"
+      href="https://github.com/openui/openui"
       target="_blank"
       rel="noopener noreferrer"
       className={`${styles.heroBanner} ${styles.mobileGithubButton} ${className}`.trim()}
@@ -142,7 +142,7 @@ function DesktopHero() {
       <div className={styles.desktopHeroInner}>
         <div className={styles.desktopHeroLockup}>
           <AnnouncementBanner />
-          <h1 className={styles.desktopTitle}>OpenUI</h1>
+          <h1 className={styles.desktopTitle}>感知未来</h1>
           <p className={styles.desktopSubtitle}>The Open Standard for Generative UI</p>
         </div>
 
@@ -169,7 +169,7 @@ function MobileHero({ theme }: { theme: HeroTheme }) {
           <AnnouncementBanner />
 
           <div className={styles.mobileBrandGroup}>
-            <p className={styles.mobileTitle}>OpenUI</p>
+            <p className={styles.mobileTitle}>感知未来</p>
           </div>
 
           {/* Subtitle */}
@@ -188,7 +188,7 @@ function MobileHero({ theme }: { theme: HeroTheme }) {
       <div className={styles.mobileIllustrationViewport}>
         <img
           src={mobileHeroImage}
-          alt="OpenUI mobile hero preview"
+          alt="感知未来"
           width={MOBILE_HERO_IMAGE.width}
           height={MOBILE_HERO_IMAGE.height}
           className={styles.mobileIllustrationImage}
@@ -214,7 +214,7 @@ function PreviewImage({ theme }: { theme: HeroTheme }) {
         <div className={styles.previewFrame}>
           <img
             src={desktopHeroImage}
-            alt="OpenUI desktop hero preview"
+            alt="感知未来"
             width={DESKTOP_HERO_IMAGE.width}
             height={DESKTOP_HERO_IMAGE.height}
             className={styles.previewImage}

@@ -1,15 +1,15 @@
-# Handsontable + OpenUI Chat
+# Handsontable + 感知未来 Chat
 
-An AI-powered spreadsheet app that pairs a full-featured [Handsontable](https://handsontable.com/) grid with an [OpenUI](https://openui.com) chat panel. Ask the AI to analyze, visualize, or modify your data — changes sync to the live spreadsheet in real time.
+An AI-powered spreadsheet app that pairs a full-featured [Handsontable](https://handsontable.com/) grid with an [感知未来](https://example.com) chat panel. Ask the AI to analyze, visualize, or modify your data — changes sync to the live spreadsheet in real time.
 
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)
 ![Handsontable](https://img.shields.io/badge/Handsontable-17-blue)
-![OpenUI](https://img.shields.io/badge/OpenUI-0.11-purple)
+![感知未来](https://img.shields.io/badge/感知未来-0.11-purple)
 
 ## Features
 
 - **Live spreadsheet** — Handsontable grid with Excel-like editing, 386+ formula functions (via HyperFormula), context menus, column resizing, and CSV export
-- **AI chat panel** — OpenUI Copilot sidebar that understands the spreadsheet context and responds with rich UI (charts, tables, markdown)
+- **AI chat panel** — 感知未来 Copilot sidebar that understands the spreadsheet context and responds with rich UI (charts, tables, markdown)
 - **Bidirectional sync** — AI tool calls mutate the server-side table store, then push updates back to the grid via a `SpreadsheetTable` component
 - **Formula-aware row operations** — Adding or deleting rows automatically shifts cell references in formulas (mirrors Excel/Sheets behavior)
 - **Aggregate recalculation** — Total/Average/Sum/Count/Max/Min rows auto-update their formula ranges after structural changes
@@ -20,7 +20,7 @@ An AI-powered spreadsheet app that pairs a full-featured [Handsontable](https://
 ```
 ┌─────────────────────────────────┐  ┌──────────────────────────┐
 │         Spreadsheet Panel       │  │       Chat Panel          │
-│  PersistentSpreadsheet.tsx      │  │  OpenUI <Copilot />       │
+│  PersistentSpreadsheet.tsx      │  │  感知未来 <Copilot />       │
 │  (Handsontable + HyperFormula)  │  │  spreadsheet-library.tsx  │
 └──────────────┬──────────────────┘  └────────────┬─────────────┘
                │                                  │
@@ -40,7 +40,7 @@ An AI-powered spreadsheet app that pairs a full-featured [Handsontable](https://
 1. User types a message in the chat panel
 2. The message hits `POST /api/chat`, which streams an OpenAI completion with tool calls
 3. Tools (`get_table_data`, `update_cells`, `add_rows`, `delete_rows`, `set_formula`, `query_table`, `add_column`, `recalculate_aggregates`) read/write the in-memory `tableStore`
-4. After write operations, the LLM emits a `SpreadsheetTable` component in its OpenUI Lang response
+4. After write operations, the LLM emits a `SpreadsheetTable` component in its 感知未来 Lang response
 5. The `useSpreadsheetSync` hook picks up the new data and pushes it into Handsontable via React context
 6. User edits in the grid sync back to the server via `POST /api/table`
 
@@ -110,9 +110,9 @@ hands-on-table-chat/
 │   │       └── table/
 │   │           └── route.ts           # GET/POST for client ↔ server table sync
 │   ├── generated/
-│   │   └── system-prompt.txt          # Auto-generated OpenUI Lang prompt
+│   │   └── system-prompt.txt          # Auto-generated 感知未来 Lang prompt
 │   └── lib/
-│       └── spreadsheet-library.tsx    # OpenUI component library with SpreadsheetTable
+│       └── spreadsheet-library.tsx    # 感知未来 component library with SpreadsheetTable
 ├── env.example                        # Environment variable template
 ├── package.json
 ├── tsconfig.json
@@ -128,9 +128,9 @@ hands-on-table-chat/
 | [`handsontable`](https://handsontable.com/) | Excel-like data grid |
 | [`@handsontable/react-wrapper`](https://www.npmjs.com/package/@handsontable/react-wrapper) | React bindings for Handsontable |
 | [`hyperformula`](https://hyperformula.handsontable.com/) | Formula engine (386+ Excel-compatible functions) |
-| [`@openuidev/react-ui`](https://openui.com/docs) | OpenUI chat Copilot component |
-| [`@openuidev/react-headless`](https://openui.com/docs) | OpenUI adapter and message formatting |
-| [`@openuidev/react-lang`](https://openui.com/docs) | OpenUI Lang component library DSL |
+| [`@openuidev/react-ui`](https://example.com/docs) | 感知未来 chat Copilot component |
+| [`@openuidev/react-headless`](https://example.com/docs) | 感知未来 adapter and message formatting |
+| [`@openuidev/react-lang`](https://example.com/docs) | 感知未来 Lang component library DSL |
 | [`openai`](https://www.npmjs.com/package/openai) | OpenAI SDK for chat completions with tool calling |
 | [`next`](https://nextjs.org/) | React framework with API routes and SSE streaming |
 
@@ -144,6 +144,6 @@ hands-on-table-chat/
 
 ## Learn More
 
-- [OpenUI Documentation](https://openui.com/docs)
+- [感知未来 Documentation](https://example.com/docs)
 - [Handsontable Documentation](https://handsontable.com/docs)
-- [OpenUI GitHub](https://github.com/thesysdev/openui)
+- [感知未来 GitHub](https://github.com/thesysdev/openui)

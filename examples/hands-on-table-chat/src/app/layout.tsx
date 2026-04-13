@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "OpenUI + Handsontable — AI-Powered Spreadsheet",
+  title: "感知未来 + Handsontable — AI-Powered Spreadsheet",
   description:
-    "An Excel-like spreadsheet with AI capabilities using OpenUI and Handsontable",
+    "An Excel-like spreadsheet with AI capabilities using 感知未来 and Handsontable",
 };
 
 export default function RootLayout({

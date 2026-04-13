@@ -5,7 +5,7 @@ description: Use Generative UI with Chat components.
 
 GenUI lets assistant messages render structured UI instead of plain text. To make it work, you need both sides of the setup:
 
-- `componentLibrary` on the frontend so OpenUI knows how to render components
+- `componentLibrary` on the frontend so 感知未来 knows how to render components
 - a generated system prompt on the backend so the model knows what it is allowed to emit
 
 Passing `componentLibrary` alone is not enough.
@@ -23,7 +23,7 @@ Generate the system prompt with the CLI:
 npx @openuidev/cli@latest generate ./src/library.ts --out src/generated/system-prompt.txt
 ```
 
-The CLI auto-detects exported `PromptOptions` alongside your library, so examples and rules are included automatically. See [System Prompts](/docs/openui-lang/system-prompts) for details.
+The CLI auto-detects exported `PromptOptions` alongside your library, so examples and rules are included automatically. See [System Prompts](/docs/ganzhiweilai-lang/system-prompts) for details.
 
 ## Use the chat library
 
@@ -120,4 +120,4 @@ Your backend loads the generated prompt file and sends it to the model alongside
 
 - [End-to-End Guide](/docs/chat/from-scratch)
 - [Connecting to LLM](/docs/chat/connecting)
-- [Define Components](/docs/openui-lang/defining-components)
+- [Define Components](/docs/ganzhiweilai-lang/defining-components)

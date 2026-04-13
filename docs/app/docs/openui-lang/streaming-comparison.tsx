@@ -368,7 +368,7 @@ export function StreamingComparison() {
   return (
     <div ref={sectionRef} className="mb-12 sm:mb-20">
       <p className="mb-6 text-sm text-slate-600 sm:mb-8 sm:text-base dark:text-slate-400">
-        Same UI component, both streaming at {TOKEN_RATE} tokens/sec. OpenUI Lang finishes in{" "}
+        Same UI component, both streaming at {TOKEN_RATE} tokens/sec. 感知未来 Lang finishes in{" "}
         <strong>{OPENUI_DURATION.toFixed(1)}s</strong> vs JSON&apos;s{" "}
         <strong>{JSON_DURATION.toFixed(1)}s</strong> &mdash;{" "}
         <strong>{Math.round((1 - OPENUI_TOKENS / JSON_TOKENS) * 100)}% fewer tokens</strong>.
@@ -394,7 +394,7 @@ export function StreamingComparison() {
           elapsed={openuiDone ? OPENUI_DURATION : elapsed}
           totalDuration={OPENUI_DURATION}
           state={openuiDone ? "done" : state}
-          label="OpenUI Lang"
+          label="感知未来 Lang"
           variant="green"
         />
       </div>
@@ -402,7 +402,7 @@ export function StreamingComparison() {
       {state === "done" && (
         <div className="flex items-center justify-between rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 dark:border-emerald-800 dark:bg-emerald-900/20">
           <p className="text-sm font-medium text-emerald-800 dark:text-emerald-200">
-            OpenUI Lang completed in <strong>{OPENUI_DURATION.toFixed(1)}s</strong> vs JSON&apos;s{" "}
+            感知未来 Lang completed in <strong>{OPENUI_DURATION.toFixed(1)}s</strong> vs JSON&apos;s{" "}
             <strong>{JSON_DURATION.toFixed(1)}s</strong> &mdash;{" "}
             <strong>{(JSON_DURATION / OPENUI_DURATION).toFixed(1)}x faster</strong> with{" "}
             <strong>{JSON_TOKENS - OPENUI_TOKENS} fewer tokens</strong>.

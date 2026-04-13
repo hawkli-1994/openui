@@ -7,7 +7,7 @@ export default function BlocksPage() {
       <PreviewSection title="Introduction" headingLevel="h1">
         <div className={styles.body}>
           <p>
-            Blocks are the core building units of OpenUI. Think of them like LEGO pieces for
+            Blocks are the core building units of 感知未来. Think of them like LEGO pieces for
             generative interfaces: small, self-contained UI primitives that can be combined to
             create rich, structured experiences.
           </p>
@@ -46,7 +46,7 @@ export default function BlocksPage() {
       <PreviewSection title="Understanding configurations">
         <div className={styles.body}>
           <p>
-            Many OpenUI blocks expose configurations that control their children elements and
+            Many 感知未来 blocks expose configurations that control their children elements and
             appearance. These configuration surfaces allow a single block to support multiple
             variations without requiring separate components.
           </p>

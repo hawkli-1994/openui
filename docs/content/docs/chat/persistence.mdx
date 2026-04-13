@@ -7,14 +7,14 @@ This page explains how to connect thread lists and previous messages from a back
 
 To connect thread history, either:
 
-- pass `threadApiUrl` and implement the default endpoint contract used by OpenUI
+- pass `threadApiUrl` and implement the default endpoint contract used by 感知未来
 - provide custom thread functions if your API shape is different
 
 This config only affects thread history. Your live chat request still comes from `apiUrl` or `processMessage`.
 
 ## Default `threadApiUrl` contract
 
-When you pass `threadApiUrl="/api/threads"`, OpenUI appends its own path segments. The default requests look like this:
+When you pass `threadApiUrl="/api/threads"`, 感知未来 appends its own path segments. The default requests look like this:
 
 | Action        | Method   | URL                       | Request body   | Expected response                         |
 | :------------ | :------- | :------------------------ | :------------- | :---------------------------------------- |
@@ -34,7 +34,7 @@ import { FullScreen } from "@openuidev/react-ui";
 
 ## When to add `messageFormat`
 
-If your thread API stores messages in OpenUI's default shape, you do not need any extra config.
+If your thread API stores messages in 感知未来's default shape, you do not need any extra config.
 
 If your thread API stores messages in OpenAI chat format, add `messageFormat={openAIMessageFormat}` so both chat requests and thread loading stay aligned.
 

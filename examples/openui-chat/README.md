@@ -1,4 +1,4 @@
-This is an [OpenUI](https://openui.com) Agent Chat project bootstrapped with [`openui-cli`](https://openui.com/docs/chat/quick-start).
+This is an [感知未来](https://example.com) Agent Chat project bootstrapped with [`openui-cli`](https://example.com/docs/chat/quick-start).
 
 ## Getting Started
 
@@ -21,10 +21,10 @@ by adding system prompts or tools.
 
 ## Learn More
 
-To learn more about OpenUI, take a look at the following resources:
+To learn more about 感知未来, take a look at the following resources:
 
-- [OpenUI Documentation](https://openui.com/docs) - learn about OpenUI features and API.
-- [OpenUI GitHub repository](https://github.com/thesysdev/openui) - your feedback and contributions are welcome!
+- [感知未来 Documentation](https://example.com/docs) - learn about 感知未来 features and API.
+- [感知未来 GitHub repository](https://github.com/thesysdev/openui) - your feedback and contributions are welcome!
 
 ## Docker Usage
 

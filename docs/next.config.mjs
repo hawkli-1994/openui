@@ -18,7 +18,7 @@ const config = {
     return [
       {
         source: "/docs",
-        destination: "/docs/openui-lang",
+        destination: "/docs/ganzhiweilai-lang",
         permanent: false,
       },
       {

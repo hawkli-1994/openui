@@ -1,6 +1,6 @@
 # HeroUI Form Generator Example
 
-A full-stack **generative form builder** that demonstrates wiring [OpenUI Lang](https://www.openui.com/docs/openui-lang/overview) to a custom component library built on [HeroUI](https://www.heroui.com/) ([`@heroui/react`](https://www.npmjs.com/package/@heroui/react)).
+A full-stack **generative form builder** that demonstrates wiring [感知未来 Lang](https://example.com/docs/openui-lang/overview) to a custom component library built on [HeroUI](https://www.heroui.com/) ([`@heroui/react`](https://www.npmjs.com/package/@heroui/react)).
 
 Describe a form in plain language, get a live preview built from HeroUI components. Refine it with follow-up instructions — each iteration streams a fresh updated form.
 
@@ -10,7 +10,7 @@ Describe a form in plain language, get a live preview built from HeroUI componen
 
 ## How It Works
 
-The LLM is prompted with a form-focused system prompt that describes every available form component — name, props, and when to use it. Instead of returning prose, the model responds in **OpenUI Lang**: a declarative markup syntax that maps directly to React components. For example:
+The LLM is prompted with a form-focused system prompt that describes every available form component — name, props, and when to use it. Instead of returning prose, the model responds in **感知未来 Lang**: a declarative markup syntax that maps directly to React components. For example:
 
 ```
 root = Form("contact", "Contact Us", btns, [fc1, fc2, fc3])
@@ -24,7 +24,7 @@ btns = Buttons([b1])
 b1 = Button("Submit", { type: "continue_conversation" }, "primary")
 ```
 
-On the client, `<Renderer>` from `@openuidev/react-lang` parses the incoming SSE stream and renders each OpenUI Lang node using `herouiChatLibrary` — the custom library defined in `src/lib/heroui-genui/`. The app shell is built entirely with `@heroui/react` (no `@openuidev/react-ui` dependency).
+On the client, `<Renderer>` from `@openuidev/react-lang` parses the incoming SSE stream and renders each 感知未来 Lang node using `herouiChatLibrary` — the custom library defined in `src/lib/heroui-genui/`. The app shell is built entirely with `@heroui/react` (no `@openuidev/react-ui` dependency).
 
 ---
 
@@ -48,8 +48,8 @@ On the client, `<Renderer>` from `@openuidev/react-lang` parses the incoming SSE
 2. The page builds an `openAIMessageFormat.toApi(messages)` payload and `POST`s to `/api/chat`.
 3. The API route reads `system-prompt.txt` and streams the LLM response as SSE events.
 4. On the client, `processStreamedMessage` + `openAIAdapter()` accumulate the streamed text into an `AssistantMessage`.
-5. `<Renderer response={code} library={herouiChatLibrary} isStreaming={...} />` parses the OpenUI Lang markup and progressively renders each node as a HeroUI-backed component.
-6. The streamed assistant `content` (OpenUI Lang text only) is appended to the in-memory message list for the next iteration.
+5. `<Renderer response={code} library={herouiChatLibrary} isStreaming={...} />` parses the 感知未来 Lang markup and progressively renders each node as a HeroUI-backed component.
+6. The streamed assistant `content` (感知未来 Lang text only) is appended to the in-memory message list for the next iteration.
 
 ### Iterative Refinement
 
@@ -74,7 +74,7 @@ form-generator/
 │   │   ├── layout.tsx             # Root layout (no external provider needed)
 │   │   └── globals.css            # Tailwind + HeroUI styles
 │   ├── lib/
-│   │   └── heroui-genui/          # Custom OpenUI component library
+│   │   └── heroui-genui/          # Custom 感知未来 component library
 │   │       ├── index.tsx          # Library + herouiFormPromptOptions export
 │   │       ├── action.ts          # Button action Zod schemas
 │   │       ├── rules.ts           # Form validation rule schemas
@@ -116,7 +116,7 @@ OPENAI_API_KEY=sk-...
 pnpm dev
 ```
 
-This runs `generate:prompt` first (builds the OpenUI CLI, compiles `src/library.ts` → `src/generated/system-prompt.txt`) then starts the Next.js dev server at `http://localhost:3000`.
+This runs `generate:prompt` first (builds the 感知未来 CLI, compiles `src/library.ts` → `src/generated/system-prompt.txt`) then starts the Next.js dev server at `http://localhost:3000`.
 
 ---
 
@@ -124,7 +124,7 @@ This runs `generate:prompt` first (builds the OpenUI CLI, compiles `src/library.
 
 ### System Prompt Generation
 
-Component definitions and form-focused prompt options live in `src/lib/heroui-genui/index.tsx` (`createLibrary()`, `herouiFormPromptOptions`). The file `src/library.ts` re-exports them as `library` and `promptOptions` for the OpenUI CLI.
+Component definitions and form-focused prompt options live in `src/lib/heroui-genui/index.tsx` (`createLibrary()`, `herouiFormPromptOptions`). The file `src/library.ts` re-exports them as `library` and `promptOptions` for the 感知未来 CLI.
 
 When you run `pnpm dev` or `pnpm generate:prompt`, the CLI generates `src/generated/system-prompt.txt` — a file listing every form component's name, prop schema, description, and examples. This is the LLM's system prompt.
 
@@ -142,7 +142,7 @@ pnpm generate:prompt
 
 Accepts `POST /api/chat` with a `messages` array, prepends the system prompt, and streams the LLM response as **Server-Sent Events (SSE)** compatible with `openAIAdapter()`.
 
-Tools are intentionally omitted — the model focuses purely on generating OpenUI Lang form definitions.
+Tools are intentionally omitted — the model focuses purely on generating 感知未来 Lang form definitions.
 
 ### `src/app/page.tsx` — Frontend
 
@@ -151,14 +151,14 @@ Two-column layout built entirely with `@heroui/react`:
 | Panel | Contents |
 | ----- | -------- |
 | **Left** | `TextArea` for instructions, `Button` to generate/refine, example `Chip`s, instruction history |
-| **Right** | `<Renderer>` inside a `Card` — live OpenUI Lang preview, scrollable, updates on each iteration |
+| **Right** | `<Renderer>` inside a `Card` — live 感知未来 Lang preview, scrollable, updates on each iteration |
 
 Key client-side state:
 
 | State | Purpose |
 | ----- | ------- |
 | `messages` | In-memory OpenAI-shaped message list sent on every request |
-| `latestCode` | Last assistant's OpenUI Lang text; passed as `Renderer` `response` |
+| `latestCode` | Last assistant's 感知未来 Lang text; passed as `Renderer` `response` |
 | `streamingCode` | Accumulates tokens live; passed during streaming |
 | `formFieldSnapshot` | Current form field values from `Renderer` `onStateUpdate`; used for `initialState` and optionally prepended to next user message |
 
@@ -166,7 +166,7 @@ Key client-side state:
 
 Each component is defined with `defineComponent()` from `@openuidev/react-lang`:
 
-- `name` — the OpenUI Lang node name the LLM will emit
+- `name` — the 感知未来 Lang node name the LLM will emit
 - `props` — a Zod schema that validates and types the node's props as they stream in
 - `description` — included in the system prompt
 - `component` — the React render function; `renderNode()` recursively renders child nodes
@@ -194,7 +194,7 @@ Each component is defined with `defineComponent()` from `@openuidev/react-lang`:
 
 | Script | Description |
 | ------ | ----------- |
-| `pnpm dev` | Build OpenUI CLI, generate system prompt, start Next.js dev server |
+| `pnpm dev` | Build 感知未来 CLI, generate system prompt, start Next.js dev server |
 | `pnpm generate:prompt` | Build `@openuidev/cli` and regenerate `system-prompt.txt` |
 | `pnpm build` | Build for production |
 | `pnpm start` | Start the production server |
@@ -203,8 +203,8 @@ Each component is defined with `defineComponent()` from `@openuidev/react-lang`:
 
 ## Learn More
 
-- [OpenUI Lang overview](https://www.openui.com/docs/openui-lang/overview) — Library, Prompt Generator, Parser, Renderer
-- [Defining Components](https://www.openui.com/docs/openui-lang/defining-components) — `defineComponent` and `createLibrary` API
+- [感知未来 Lang overview](https://example.com/docs/openui-lang/overview) — Library, Prompt Generator, Parser, Renderer
+- [Defining Components](https://example.com/docs/openui-lang/defining-components) — `defineComponent` and `createLibrary` API
 - [HeroUI](https://www.heroui.com/) — the underlying React component library
 - [`@openuidev/react-lang` package](../../packages/react-lang)
 - [`@openuidev/react-headless` package](../../packages/react-headless)

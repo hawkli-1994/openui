@@ -1,5 +1,5 @@
 {
-  "name": "OpenUI",
+  "name": "感知未来",
   "version": "1.0.0",
   "description": "The open standard for generative UI — a streaming-first language, React runtime, and component libraries for building AI-powered chat and copilot interfaces",
   "main": "index.js",
@@ -23,7 +23,6 @@
     "typescript": "^5.9.3"
   },
   "keywords": [
-    "openui",
     "generative-ui",
     "react",
     "ai",
@@ -34,8 +33,8 @@
     "components",
     "ui-framework"
   ],
-  "homepage": "https://openui.com",
-  "author": "engineering@openui.com",
+  "homepage": "https://example.com",
+  "author": "engineering@example.com",
   "license": "MIT",
   "repository": {
     "type": "git",

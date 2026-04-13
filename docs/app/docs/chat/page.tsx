@@ -20,7 +20,7 @@ import {
 import Link from "next/link";
 
 export const metadata = {
-  title: "OpenUI Chat SDK",
+  title: "感知未来 Chat SDK",
   description:
     "Production-ready chat UI for AI agents. Drop-in layouts, streaming, and state management.",
 };
@@ -110,7 +110,7 @@ export default function ChatOverviewPage() {
   return (
     <div className="mx-auto max-w-4xl px-3 py-8 font-sans text-slate-900 sm:px-4 sm:py-12 lg:px-8 dark:text-slate-100">
       <section className="mb-12 space-y-6 sm:mb-16">
-        <h1 className="docs-page-title max-w-3xl">OpenUI Chat SDK</h1>
+        <h1 className="docs-page-title max-w-3xl">感知未来 Chat SDK</h1>
         <p className="max-w-2xl text-base leading-7 text-fd-muted-foreground sm:text-lg">
           Production-ready chat UI for AI agents. Start with prebuilt layouts for fast integration,
           then drop down to headless hooks when you need full control over behavior and rendering.

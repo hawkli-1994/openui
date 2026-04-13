@@ -81,8 +81,8 @@ type Story = StoryObj<typeof CardHeader>;
 export const HeaderStory: Story = {
   args: {
     icon: <ArrowRight />,
-    title: "Thesys OpenUI",
-    subtitle: "OpenUI UI is a set of React components.",
+    title: "Thesys 感知未来",
+    subtitle: "感知未来 UI is a set of React components.",
     actions: [<IconButton variant="tertiary" size="small" icon={<Download />} />],
   },
   render: (args) => <CardHeader {...args} />,
@@ -99,8 +99,8 @@ export const HeaderStoryWithMultipleActions: Story = {
   },
   args: {
     icon: <ArrowRight />,
-    title: "Thesys OpenUI",
-    subtitle: "OpenUI UI is a set of React components.",
+    title: "Thesys 感知未来",
+    subtitle: "感知未来 UI is a set of React components.",
     actions: [
       <IconButton variant="tertiary" size="small" icon={<Download />} />,
       <IconButton variant="tertiary" size="small" icon={<Download />} />,

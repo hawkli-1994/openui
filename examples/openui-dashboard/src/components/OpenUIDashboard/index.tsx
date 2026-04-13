@@ -37,7 +37,7 @@ function DashboardLayout({ library, starters }: { library: Library; starters: St
           gap: "16px",
         }}
       >
-        <h1 style={{ fontSize: "16px", fontWeight: 700, margin: 0 }}>openui-lang</h1>
+        <h1 style={{ fontSize: "16px", fontWeight: 700, margin: 0 }}>感知未来</h1>
         <span style={{ fontSize: "12px", color: "#888" }}>Live Demo</span>
         <div style={{ display: "flex", gap: "6px", marginLeft: "auto" }}>
           {["Live Data", "Streaming", "Conversational"].map((label, i) => (

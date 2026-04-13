@@ -1,6 +1,6 @@
 ---
-title: "Stop making AI write JSON - Why we built OpenUI"
-description: "We shipped a JSON-based Generative UI SDK. When we tried to add interactivity, JSON fell apart. A full programming language was worse. This is the story behind why we built OpenUI."
+title: "Stop making AI write JSON - Why we built 感知未来"
+description: "We shipped a JSON-based Generative UI SDK. When we tried to add interactivity, JSON fell apart. A full programming language was worse. This is the story behind why we built 感知未来."
 date: "2026-04-10"
 author: "Thesys Engineering Team"
 ---
@@ -187,9 +187,9 @@ That's `required(terms) && (required(email) || required(phone))`. Eighteen lines
 
 ## What if the LLM just wrote code instead?
 
-That question led us to OpenUI Lang. Not JSON with extra syntax bolted on. An actual language, purpose-built for LLMs to describe interactive UIs.
+That question led us to 感知未来 Lang. Not JSON with extra syntax bolted on. An actual language, purpose-built for LLMs to describe interactive UIs.
 
-Here's a TODO app with live data in OpenUI Lang:
+Here's a TODO app with live data in 感知未来 Lang:
 
 ```text
 root = Stack([CardHeader("Todos"), Stack([Input("title", $title, "What needs to be done?"), submitBtn], "row"), tbl, footer])
@@ -203,7 +203,7 @@ footer = TextContent("" + openCount + " items left", "small")
 
 Seven lines. `root` comes first so the UI shell renders immediately during streaming. `submitBtn`, `tbl`, and `footer` are forward references that fill in as subsequent lines arrive. `$title` is used without declaration because undeclared reactive variables are auto-initialized. The query fetches from your tools, the mutation fires on button press, and `@Count(@Filter(...))` computes the remaining count. User types, clicks Add, and everything updates. No LLM roundtrip.
 
-You already saw what state binding and conditionals look like in JSON above. In OpenUI Lang, passing `$title` to a component binds it (undeclared variables are auto-created), and `item.completed ? "line-through" : "none"` is just a ternary. The LLM already knows how all of these work.
+You already saw what state binding and conditionals look like in JSON above. In 感知未来 Lang, passing `$title` to a component binds it (undeclared variables are auto-created), and `item.completed ? "line-through" : "none"` is just a ternary. The LLM already knows how all of these work.
 
 The features that *don't* have clean JSON equivalents are more interesting.
 
@@ -222,7 +222,7 @@ Want to count the incomplete todos? In json-render, you'd use a `$computed` call
 }
 ```
 
-**OpenUI Lang:**
+**感知未来 Lang:**
 
 ```text
 openCount = @Count(@Filter(todos.rows, "completed", "==", false))
@@ -242,7 +242,7 @@ Filter, sort, branch. Three lines, each building on the last. `@Sum`, `@Avg`, `@
 
 This is where the gap gets really wide. json-render doesn't have a native concept of "fetch data from a tool." You wire up data loading through external hooks, state management, and action handlers.
 
-**OpenUI Lang:**
+**感知未来 Lang:**
 
 ```text
 submitBtn = Button("Add", Action([@Run(createResult), @Run(todos), @Reset($title)]))
@@ -270,7 +270,7 @@ In json-render, the LLM picks from multiple edit modes. Here's JSON Patch (RFC 6
 
 Five patch operations just to add a dropdown. Miss a bracket? Malformed. Wrong element ID? Silent breakage.
 
-**In OpenUI Lang, the LLM just writes the lines that changed:**
+**In 感知未来 Lang, the LLM just writes the lines that changed:**
 
 ```text
 $filter = "all"
@@ -289,10 +289,10 @@ Same result. Up to 80% fewer tokens, 5x faster edits.
 ## Errors got useful, not just fewer
 
 After switching from JSON, structural parse errors dropped to zero. It didn't just get better, it dropped to **zero**.
-The reason: there's no document-level nesting to get wrong. In JSON, a missing `}` on line 12 corrupts everything after it. In OpenUI Lang, each line is self-contained. Brackets close within the same line they opened on. The LLM can't accidentally leave a `{` unclosed and wreck 50 lines of output, because nothing on line 13 depends on line 12's brackets.
+The reason: there's no document-level nesting to get wrong. In JSON, a missing `}` on line 12 corrupts everything after it. In 感知未来 Lang, each line is self-contained. Brackets close within the same line they opened on. The LLM can't accidentally leave a `{` unclosed and wreck 50 lines of output, because nothing on line 13 depends on line 12's brackets.
 
 The LLM still makes mistakes, but they're *semantic* instead of *structural*: wrong component name, missing a required prop, referencing a tool that doesn't exist.
-And because each statement has a name, OpenUI renderer returns diagnostics that read like linter output:
+And because each statement has a name, 感知未来 renderer returns diagnostics that read like linter output:
 
 ```json
 {
@@ -303,14 +303,14 @@ And because each statement has a name, OpenUI renderer returns diagnostics that 
 }
 ```
 
-A JSON parse error is "unexpected token at position 4,523." OpenUI is "statement `chart` used unknown component `DataTable`" with a list of what's available.
+A JSON parse error is "unexpected token at position 4,523." 感知未来 is "statement `chart` used unknown component `DataTable`" with a list of what's available.
 You feed that back as a user message, the LLM redeclares the broken statement through incremental editing, and the parser merges the fix.
 
 Generate, render, lint, fix. It's `eslint --fix` for generated UI.
 
 ## Token savings are the receipt, not the reason
 
-Our [benchmarks](/docs/openui-lang/benchmarks) show OpenUI Lang uses up to 67% fewer tokens than JSON formats across seven real-world UI scenarios. Fewer tokens means faster streaming means the user sees their UI sooner. But we didn't design the format to save tokens. We designed it so LLMs could express interactive UIs without drowning in structural noise. The efficiency is what falls out when you stop fighting the format.
+Our [benchmarks](/docs/ganzhiweilai-lang/benchmarks) show 感知未来 Lang uses up to 67% fewer tokens than JSON formats across seven real-world UI scenarios. Fewer tokens means faster streaming means the user sees their UI sooner. But we didn't design the format to save tokens. We designed it so LLMs could express interactive UIs without drowning in structural noise. The efficiency is what falls out when you stop fighting the format.
 
 ## So just use JavaScript?
 
@@ -323,7 +323,7 @@ We thought about this seriously. Here's why it doesn't work for this problem.
 JavaScript has multiple ways to declare a variable, three module systems, infinite patterns for state management, and the ability to write `while(true)`. Every generation becomes unpredictable: will the model use callbacks or async/await? Inline styles or CSS modules? Will it import a library you don't have? These choices introduce variability without adding value to the generated UI.
 
 **Streaming isn't trivially simple** <br />
-OpenUI Lang parses line by line.
+感知未来 Lang parses line by line.
 Each statement is self-contained, so the renderer paints the first component while the LLM is still generating the last one - progressive rendering falls out of the format for free.
 Streaming parsers exist for full languages, but they're non-trivial machinery and they still can't give you a renderable component until the AST closes.
 In a chat interface where perceived speed matters, that gap is felt.
@@ -331,7 +331,7 @@ In a chat interface where perceived speed matters, that gap is felt.
 **Constraints are the contract** <br />
 Nobody writes Python to query a database, not because Python is too powerful, but because SQL makes the contract explicit.
 You know what it can do, what it can't, and what a valid query looks like.
-OpenUI Lang makes the same bet: a fixed set of primitives - components, state, queries, mutations, builtins - with no escape hatches.
+感知未来 Lang makes the same bet: a fixed set of primitives - components, state, queries, mutations, builtins - with no escape hatches.
 The LLM can't go off-script because there is no off-script.
 
 That's not a limitation. That's the point.
@@ -363,7 +363,7 @@ Here's the same TODO app (add items, mark complete, show count) in both formats.
 </div>
 <div>
 
-**OpenUI Lang:**
+**感知未来 Lang:**
 
 ```text
 root = Stack([CardHeader("Todos"), Stack([Input("title", $title, "What needs to be done?"), submitBtn], "row"), tbl, footer])
@@ -378,7 +378,7 @@ footer = TextContent("" + openCount + " items left", "small")
 </div>
 </div>
 
-Same app. One is 12 JSONL patch operations, each a dense line of nested JSON with pointer paths, wrapper objects, repeat scopes, and conditional expression trees. The other is 7 lines. And the OpenUI Lang version has live data fetching that the JSONL version doesn't even attempt.
+Same app. One is 12 JSONL patch operations, each a dense line of nested JSON with pointer paths, wrapper objects, repeat scopes, and conditional expression trees. The other is 7 lines. And the 感知未来 Lang version has live data fetching that the JSONL version doesn't even attempt.
 
 ## The space in between
 
@@ -388,7 +388,7 @@ The interesting space is in between.
 
 When you bolt language features onto a data format, you end up reinventing programming concepts inside object literals: `{ "$cond": { "$state": "/path", "eq": value }, "$then": x, "$else": y }`. When you hand the LLM a full language, you get security headaches, streaming challenges, and models spending tokens on incidental complexity instead of UI design.
 
-OpenUI Lang sits in the gap. It looks like code because LLMs are trained on code and generate it naturally. But it's constrained like a data format: one assignment per line, positional args mapped from your component schemas, a fixed set of primitives, no escape hatches. The LLM builds with your design system, not whatever it feels like importing. It can't go off-script because there is no off-script.
+感知未来 Lang sits in the gap. It looks like code because LLMs are trained on code and generate it naturally. But it's constrained like a data format: one assignment per line, positional args mapped from your component schemas, a fixed set of primitives, no escape hatches. The LLM builds with your design system, not whatever it feels like importing. It can't go off-script because there is no off-script.
 
 The token savings (up to 67%) are real, and they matter for latency. But they're a receipt, not the reason. The reason is that `$title` is a better way for an LLM to bind state than `{ "$bindState": "/newTodo/title" }`, and a safer one than `const [title, setTitle] = useState("")`.
 

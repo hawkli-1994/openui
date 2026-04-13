@@ -10,7 +10,7 @@ import { FullScreen } from "../ComposedStandalone.js";
 import { ConversationStartersConfig, WelcomeMessageConfig } from "../types.js";
 
 export default {
-  title: "Components/OpenUIChat",
+  title: "Components/感知未来Chat",
   tags: ["dev"],
 };
 
@@ -30,7 +30,7 @@ function mockSSEResponse(text: string, delayMs = 500): Promise<Response> {
 }
 
 const SAMPLE_WELCOME_MESSAGE: WelcomeMessageConfig = {
-  title: "Hi, I'm OpenUI Assistant",
+  title: "Hi, I'm 感知未来 Assistant",
   description: "I can help you with questions about your account, products, and more.",
   image: { url: logoUrl },
 };
@@ -40,7 +40,7 @@ const SAMPLE_STARTERS: ConversationStartersConfig = {
   options: [
     {
       displayText: "Help me get started",
-      prompt: "Help me get started with OpenUI",
+      prompt: "Help me get started with 感知未来",
       icon: <Sparkles size={16} />,
     },
     {
@@ -115,7 +115,7 @@ const sharedProps = {
     ] as Message[];
   },
   logoUrl,
-  agentName: "OpenUI Assistant",
+  agentName: "感知未来 Assistant",
 };
 
 export const Default = {

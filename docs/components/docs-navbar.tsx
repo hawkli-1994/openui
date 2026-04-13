@@ -13,7 +13,7 @@ import { SiteHeaderFrame } from "./site-header";
 import { ThemeToggle } from "./theme-toggle";
 
 const tabs = [
-  { title: "OpenUI", url: "/docs/openui-lang" },
+  { title: "感知未来", url: "/docs/ganzhiweilai-lang" },
   { title: "Chat", url: "/docs/chat" },
   { title: "API Reference", url: "/docs/api-reference" },
 ] as const;
@@ -127,7 +127,7 @@ export function DocsNavbar({ showSidebarToggle = false }: { showSidebarToggle?: 
                   </svg>
                 </Link>
                 <ThemeToggle />
-                <GitHubStarButton repo="thesysdev/openui" />
+                <GitHubStarButton repo="openui/openui" />
               </div>
             </div>
           }

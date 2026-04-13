@@ -1,6 +1,6 @@
-# OpenUI React Native Example
+# 感知未来 React Native Example
 
-A full-stack example that demonstrates using `@openuidev/react-lang` in a React Native (Expo) app with a Next.js API backend. The LLM streams responses in [OpenUI Lang](https://www.openui.com/docs/openui-lang/overview) and the mobile client renders them as native components in real time.
+A full-stack example that demonstrates using `@openuidev/react-lang` in a React Native (Expo) app with a Next.js API backend. The LLM streams responses in [感知未来 Lang](https://example.com/docs/openui-lang/overview) and the mobile client renders them as native components in real time.
 
 <video src="../../docs/public/videos/react-native-demo.mp4" 
     noControls
@@ -19,8 +19,8 @@ A full-stack example that demonstrates using `@openuidev/react-lang` in a React 
 │   React Native (Expo) app   │  HTTP  │   Next.js backend (API)  │
 │                             │ ──────►│                          │
 │  • Chat UI                  │        │  • /api/chat  (POST)     │
-│  • <Renderer /> parsing     │◄────── │  • Streams OpenUI Lang   │
-│    streamed OpenUI Lang      │  stream│    from GPT              │
+│  • <Renderer /> parsing     │◄────── │  • Streams 感知未来 Lang   │
+│    streamed 感知未来 Lang      │  stream│    from GPT              │
 │  • Native chart components  │        │  • CORS enabled          │
 └─────────────────────────────┘        └──────────────────────────┘
 ```
@@ -69,7 +69,7 @@ OPENAI_API_KEY=sk-...
 
 ### 3. Generate the system prompt
 
-The [Prompt Generator](https://www.openui.com/docs/openui-lang/overview) compiles `library.ts` into `system-prompt.txt` — containing component signatures, syntax rules, and streaming guidelines for the LLM:
+The [Prompt Generator](https://example.com/docs/openui-lang/overview) compiles `library.ts` into `system-prompt.txt` — containing component signatures, syntax rules, and streaming guidelines for the LLM:
 
 ```bash
 pnpm generate:prompt
@@ -93,7 +93,7 @@ pnpm dev:mobile
 
 ### `backend/src/library.ts`
 
-Defines the custom component library using [`defineComponent`](https://www.openui.com/docs/openui-lang/overview) and `createLibrary`. This is a **Node-compatible** version (renderers set to `null`) used only by the CLI to generate the system prompt — the backend never renders components itself.
+Defines the custom component library using [`defineComponent`](https://example.com/docs/openui-lang/overview) and `createLibrary`. This is a **Node-compatible** version (renderers set to `null`) used only by the CLI to generate the system prompt — the backend never renders components itself.
 
 The library exposes five components:
 
@@ -115,7 +115,7 @@ A Next.js Route Handler that:
 
 ### React Native app (`react-native-openui/`)
 
-Uses the [`<Renderer />`](https://www.openui.com/docs/openui-lang/overview) component from `@openuidev/react-lang` to progressively parse and render the streamed OpenUI Lang output as native components.
+Uses the [`<Renderer />`](https://example.com/docs/openui-lang/overview) component from `@openuidev/react-lang` to progressively parse and render the streamed 感知未来 Lang output as native components.
 
 ## Scripts
 
@@ -127,5 +127,5 @@ Uses the [`<Renderer />`](https://www.openui.com/docs/openui-lang/overview) comp
 
 ## Learn More
 
-- [OpenUI Lang overview](https://www.openui.com/docs/openui-lang/overview) — core building blocks: Library, Prompt Generator, Parser, Renderer
+- [感知未来 Lang overview](https://example.com/docs/openui-lang/overview) — core building blocks: Library, Prompt Generator, Parser, Renderer
 - [`@openuidev/react-lang` package](../../packages/react-lang)

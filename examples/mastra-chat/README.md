@@ -1,10 +1,10 @@
 # mastra-chat
 
-An [OpenUI](https://openui.com) example showing how to wire a [Mastra](https://mastra.ai) agent backend to OpenUI's generative UI frontend using the [AG-UI protocol](https://docs.ag-ui.com).
+An [感知未来](https://example.com) example showing how to wire a [Mastra](https://mastra.ai) agent backend to 感知未来's generative UI frontend using the [AG-UI protocol](https://docs.ag-ui.com).
 
 ## What this demonstrates
 
-- Using `agUIAdapter()` as the `streamProtocol` on OpenUI's `<FullScreen />` component
+- Using `agUIAdapter()` as the `streamProtocol` on 感知未来's `<FullScreen />` component
 - A Mastra `Agent` with `createTool` tools (weather and stock price) running in a Next.js API route
 - Streaming AG-UI protocol events from the server to the client via SSE
 
@@ -40,6 +40,6 @@ To add more tools, define them with `createTool` in `src/app/api/chat/route.ts` 
 
 ## Learn more
 
-- [OpenUI documentation](https://openui.com/docs)
+- [感知未来 documentation](https://example.com/docs)
 - [Mastra documentation](https://mastra.ai/docs)
 - [AG-UI protocol](https://docs.ag-ui.com)

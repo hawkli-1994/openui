@@ -70,7 +70,7 @@ export async function POST(req: NextRequest) {
       Authorization: `Bearer ${apiKey}`,
       "Content-Type": "application/json",
       "HTTP-Referer": `${BASE_URL}/demo/github`,
-      "X-Title": "OpenUI GitHub Demo",
+      "X-Title": "感知未来 GitHub Demo",
     },
     body: JSON.stringify({
       model: GITHUB_DEMO_MODEL,

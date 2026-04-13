@@ -109,7 +109,7 @@ export function ConversationPanel({
               ) : (
                 <div className="conv-thinking">
                   {elapsed
-                    ? `${(elapsed / 1000).toFixed(1)}s — ${responseHasCode ? "writing openui-lang..." : "thinking..."}`
+                    ? `${(elapsed / 1000).toFixed(1)}s — ${responseHasCode ? "writing 感知未来 Lang..." : "thinking..."}`
                     : "thinking..."}
                 </div>
               )}

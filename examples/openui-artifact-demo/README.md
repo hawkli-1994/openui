@@ -1,6 +1,6 @@
-# OpenUI Artifact Demo
+# 感知未来 Artifact Demo
 
-A demo application showcasing the OpenUI artifact system for displaying generated code in a resizable side panel.
+A demo application showcasing the 感知未来 artifact system for displaying generated code in a resizable side panel.
 
 ## Features
 
@@ -30,7 +30,7 @@ export OPENAI_API_KEY=your-key-here
 
 ## How It Works
 
-This example extends the standard OpenUI chat library with a custom `ArtifactCodeBlock` component that integrates with the OpenUI artifact system:
+This example extends the standard 感知未来 chat library with a custom `ArtifactCodeBlock` component that integrates with the 感知未来 artifact system:
 
 1. User asks for code (e.g., "Build me a React login form")
 2. AI generates a response using `ArtifactCodeBlock` components

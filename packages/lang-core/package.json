@@ -1,7 +1,7 @@
 {
   "name": "@openuidev/lang-core",
   "version": "0.2.1",
-  "description": "Framework-agnostic core for OpenUI Lang: parser, prompt generation, validation, and type definitions",
+  "description": "Framework-agnostic core for 感知未来 Lang: parser, prompt generation, validation, and type definitions",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.cjs",
@@ -49,7 +49,6 @@
     }
   },
   "keywords": [
-    "openui",
     "openui-lang",
     "parser",
     "prompt-generation",
@@ -59,7 +58,7 @@
     "generative-ui",
     "framework-agnostic"
   ],
-  "homepage": "https://openui.com",
+  "homepage": "https://example.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/thesysdev/openui.git",

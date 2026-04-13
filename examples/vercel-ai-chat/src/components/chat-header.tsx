@@ -17,7 +17,7 @@ export function ChatHeader({ isSidebarOpen, onToggleSidebar }: ChatHeaderProps) 
         <div className="flex flex-col items-start">
         <h1 className="text-sm font-semibold text-zinc-900 dark:text-zinc-100">Vercel AI Chat</h1>
         <span className="text-xs text-zinc-400 dark:text-zinc-500">
-          Vercel AI SDK + OpenUI Renderer
+          Vercel AI SDK + 感知未来 Renderer
         </span>
         </div>
       </div>

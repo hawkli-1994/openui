@@ -1,6 +1,6 @@
-# OpenUI Lang 基准测试
+# 感知未来 Lang 基准测试
 
-衡量 **OpenUI Lang** 与另外三种结构化流式格式在七个真实 UI 场景中的 token 效率和预计生成延迟：
+衡量 **感知未来 Lang** 与另外三种结构化流式格式在七个真实 UI 场景中的 token 效率和预计生成延迟：
 
 - **YAML**
 - **Vercel JSON-Render**（RFC 6902 patch 流）
@@ -10,18 +10,18 @@
 
 | 格式                   | 说明                                                                  |
 | ---------------------- | --------------------------------------------------------------------- |
-| **OpenUI Lang**        | 由 LLM 直接生成的面向行 DSL                                           |
+| **感知未来 Lang**        | 由 LLM 直接生成的面向行 DSL                                           |
 | **YAML**               | YAML `root` / `elements` 规范载荷                                     |
 | **Vercel JSON-Render** | [JSON Patch (RFC 6902)](https://jsonpatch.com/) 操作的 JSONL 流       |
 | **Thesys C1 JSON**     | 标准化组件树 JSON（`component` + `props`）                            |
 
-四种格式编码的 UI 完全相同。LLM 始终先生成 OpenUI Lang，然后将解析得到的 AST 映射为另外三种格式。
+四种格式编码的 UI 完全相同。LLM 始终先生成 感知未来 Lang，然后将解析得到的 AST 映射为另外三种格式。
 
 ## 方法
 
 1. 使用 `generate-samples.ts` 中固定的七个提示词集合（`simple-table`、`chart-with-data`、`contact-form`、`dashboard`、`pricing-page`、`settings-panel`、`e-commerce-product`）。
-2. 针对每个提示词，使用 `gpt-5.2` 在 `temperature: 0` 且启用流式补全的条件下生成一次 OpenUI Lang。
-3. 使用 `createParser(schema)` 解析 OpenUI Lang 输出，使位置参数通过 `schema.json` 映射为具名 props。
+2. 针对每个提示词，使用 `gpt-5.2` 在 `temperature: 0` 且启用流式补全的条件下生成一次 感知未来 Lang。
+3. 使用 `createParser(schema)` 解析 感知未来 Lang 输出，使位置参数通过 `schema.json` 映射为具名 props。
 4. 将同一个解析后的 AST 转换为：
    - `*.c1.json`：通过 `thesys-c1-converter.ts` 转为 Thesys C1 格式。
    - `*.vercel.jsonl`：通过 `vercel-jsonl-converter.ts` 转为 json-render RFC 6902 patches。
@@ -33,7 +33,7 @@
 
 使用 `tiktoken`（`gpt-5` 模型编码器）测得。由 GPT-5.2 在 temperature 0 下生成。
 
-| 场景               |     YAML | Vercel JSON-Render | Thesys C1 JSON | OpenUI Lang |    相比 YAML | 相比 Vercel |    相比 C1 |
+| 场景               |     YAML | Vercel JSON-Render | Thesys C1 JSON | 感知未来 Lang |    相比 YAML | 相比 Vercel |    相比 C1 |
 | ------------------ | -------: | -----------------: | -------------: | ----------: | -----------: | ----------: | ---------: |
 | simple-table       |      316 |                340 |            357 |         148 |       -53.2% |      -56.5% |     -58.5% |
 | chart-with-data    |      464 |                520 |            516 |         231 |       -50.2% |      -55.6% |     -55.2% |

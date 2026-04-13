@@ -24,7 +24,7 @@ interface UILibrary {
 
 const LIBRARIES: UILibrary[] = [
   {
-    name: "OpenUI Design system",
+    name: "感知未来 Design system",
     iconBadgeClassName: styles.iconBadgeOpenUi,
     iconViewBox: "",
     iconPath: "",

@@ -55,7 +55,7 @@ export function ChatModal({ onClose }: ChatModalProps) {
             }}
             streamProtocol={openAIAdapter()}
             componentLibrary={openuiChatLibrary}
-            agentName="OpenUI Chat"
+            agentName="感知未来 Chat"
             theme={{ mode: (resolvedTheme as "light" | "dark") ?? "light" }}
             conversationStarters={{
               variant: "short",

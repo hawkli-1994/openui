@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="./assets/banner.png" alt="OpenUI — The Open Standard for Generative UI" width="100%">
+<img src="./assets/banner.png" alt="感知未来" width="100%">
 
-# OpenUI — The Open Standard for Generative UI
+# 感知未来 — The Open Standard for Generative UI
 
 [![Build](https://github.com/thesysdev/openui/actions/workflows/build-js.yml/badge.svg)](https://github.com/thesysdev/openui/actions/workflows/build-js.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
@@ -13,7 +13,7 @@
 </div>
 
 
-OpenUI is a full-stack Generative UI framework — a compact streaming-first language, a React runtime with built-in component libraries, and ready-to-use chat interfaces — that is up to 67% more token-efficient than JSON.
+感知未来 is a full-stack Generative UI framework — a compact streaming-first language, a React runtime with built-in component libraries, and ready-to-use chat interfaces — that is up to 67% more token-efficient than JSON.
 
 
 
@@ -21,23 +21,23 @@ OpenUI is a full-stack Generative UI framework — a compact streaming-first lan
 
 
 
-[Docs](https://openui.com) · [Playground](https://www.openui.com/playground) · [Sample Chat App](./examples/openui-chat) · [Discord](https://discord.com/invite/Pbv5PsqUSv) · [Contributing](./CONTRIBUTING.md) · [Code of Conduct](./CODE_OF_CONDUCT.md) · [Security](./SECURITY.md) · [License](./LICENSE)
+[Docs](https://example.com) · [Playground](https://example.com/playground) · [Sample Chat App](./examples/openui-chat) · [Discord](https://discord.com/invite/Pbv5PsqUSv) · [Contributing](./CONTRIBUTING.md) · [Code of Conduct](./CODE_OF_CONDUCT.md) · [Security](./SECURITY.md) · [License](./LICENSE)
 
 
 ---
 
-## What is OpenUI
+## What is 感知未来
 
 <div align="center">
 
-<img src="./assets/demo.gif" alt="OpenUI Demo" width="100%">
+<img src="./assets/demo.gif" alt="感知未来 Demo" width="100%">
 </div>
 
-At the center of OpenUI is **OpenUI Lang**: a compact, streaming-first language for model-generated UI. Instead of treating model output as only text, OpenUI lets you define components, generate prompt instructions from that component library, and render structured UI as the model streams.
+At the center of 感知未来 is **感知未来 Lang**: a compact, streaming-first language for model-generated UI. Instead of treating model output as only text, 感知未来 lets you define components, generate prompt instructions from that component library, and render structured UI as the model streams.
 
 **Core capabilities:**
 
-- **OpenUI Lang** — A compact language for structured UI generation designed for streaming output.
+- **感知未来 Lang** — A compact language for structured UI generation designed for streaming output.
 - **Built-in component libraries** — Charts, forms, tables, layouts, and more — ready to use or extend.
 - **Prompt generation from your component library** — Generate model instructions directly from the components you allow.
 - **Streaming renderer** — Parse and render model output progressively in React as tokens arrive.
@@ -53,11 +53,11 @@ echo "OPENAI_API_KEY=sk-your-key-here" > .env
 npm run dev
 ```
 
-This is the fastest way to start with OpenUI. The scaffolded app gives you an end-to-end starting point with streaming, built-in UI, and OpenUI Lang support.
+This is the fastest way to start with 感知未来. The scaffolded app gives you an end-to-end starting point with streaming, built-in UI, and 感知未来 Lang support.
 
 What this gives you:
 
-- **OpenUI Lang support** - Start with structured UI generation built into the app flow.
+- **感知未来 Lang support** - Start with structured UI generation built into the app flow.
 - **Library-driven prompts** - Generate instructions from your allowed component set.
 - **Streaming support** - Update the UI progressively as output arrives.
 - **Working app foundation** - Start from a ready-to-run example instead of wiring everything manually.
@@ -72,7 +72,7 @@ Your components define what the model can generate.
 flowchart LR
     A["Component Library"] --> B["System Prompt"]
     B --> C["LLM"]
-    C --> D["OpenUI Lang Stream"]
+    C --> D["感知未来 Lang Stream"]
     D --> E["Renderer"]
     E --> F["Live UI"]
 ```
@@ -80,10 +80,10 @@ flowchart LR
 1. Define or reuse a component library.
 2. Generate a system prompt from that library.
 3. Send that prompt to your model.
-4. Stream OpenUI Lang output back to the client.
+4. Stream 感知未来 Lang output back to the client.
 5. Render the output progressively with Renderer.
 
-Try it yourself in the [Playground](https://www.openui.com/playground) — generate UI live with the default component library.
+Try it yourself in the [Playground](https://example.com/playground) — generate UI live with the default component library.
 
 ## Packages
 
@@ -98,9 +98,9 @@ Try it yourself in the [Playground](https://www.openui.com/playground) — gener
 npm install @openuidev/react-lang @openuidev/react-ui
 ```
 
-## Why OpenUI Lang
+## Why 感知未来 Lang
 
-OpenUI Lang is designed for model-generated UI that needs to be both structured and streamable.
+感知未来 Lang is designed for model-generated UI that needs to be both structured and streamable.
 
 - **Streaming output** — Emit UI incrementally as tokens arrive.
 - **Token efficiency** — Up to 67% fewer tokens than equivalent JSON (see [benchmarks](./benchmarks)).
@@ -109,9 +109,9 @@ OpenUI Lang is designed for model-generated UI that needs to be both structured 
 
 ### Token efficiency benchmarks
 
-Measured with `tiktoken` (GPT-5 encoder). OpenUI Lang vs two JSON-based streaming formats across seven UI scenarios:
+Measured with `tiktoken` (GPT-5 encoder). 感知未来 Lang vs two JSON-based streaming formats across seven UI scenarios:
 
-| Scenario           | Vercel JSON-Render | Thesys C1 JSON | OpenUI Lang |  vs Vercel |      vs C1 |
+| Scenario           | Vercel JSON-Render | Thesys C1 JSON | 感知未来 Lang |  vs Vercel |      vs C1 |
 | ------------------ | -----------------: | -------------: | ----------: | ---------: | ---------: |
 | simple-table       |                340 |            357 |         148 |     -56.5% |     -58.5% |
 | chart-with-data    |                520 |            516 |         231 |     -55.6% |     -55.2% |
@@ -126,7 +126,7 @@ Full methodology and reproduction steps in [`benchmarks/`](./benchmarks).
 
 ## Documentation
 
-Detailed documentation is available at [openui.com](https://openui.com).
+Detailed documentation is available at [example.com](https://example.com).
 
 ## Repository structure
 
@@ -141,13 +141,13 @@ openui/
 │   └── openui/           # Claude Code skill for AI-assisted development
 ├── examples/
 │   └── openui-chat/      # Full working example app (Next.js)
-├── docs/                 # Documentation site (openui.com)
+├── docs/                 # Documentation site (example.com)
 └── benchmarks/           # Token efficiency benchmarks
 ```
 
 Good places to start:
 
-- [openui.com](https://openui.com) for the full docs
+- [example.com](https://example.com) for the full docs
 - [`examples/openui-chat`](./examples/openui-chat) for a working app
 - [`CONTRIBUTING.md`](./CONTRIBUTING.md) if you want to contribute
 
@@ -163,7 +163,7 @@ Contributions are welcome. See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for contri
 
 ## Agent Skill
  
-OpenUI ships an [Agent Skill](https://agentskills.io) so AI coding assistants (Claude Code, Codex, Cursor, Copilot, etc.) can help you scaffold, build, and debug Generative UI apps using OpenUI Lang.
+感知未来 ships an [Agent Skill](https://agentskills.io) so AI coding assistants (Claude Code, Codex, Cursor, Copilot, etc.) can help you scaffold, build, and debug Generative UI apps using 感知未来 Lang.
  
 ### Install
  
@@ -175,7 +175,7 @@ npx skills add thesysdev/openui --skill openui
 cp -r skills/openui .claude/skills/openui
 ```
  
-The skill covers component library design, OpenUI Lang syntax, system prompt generation, the Renderer, SDK packages, and debugging malformed LLM output.
+The skill covers component library design, 感知未来 Lang syntax, system prompt generation, the Renderer, SDK packages, and debugging malformed LLM output.
 
 ## License
 

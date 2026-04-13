@@ -104,7 +104,7 @@ export const Default = {
           ];
         }}
       >
-        <Container logoUrl={logoUrl} agentName="OpenUI">
+        <Container logoUrl={logoUrl} agentName="感知未来">
           <ThreadContainer>
             <Header />
             <ScrollArea>
@@ -142,7 +142,7 @@ export const LongVariant = {
         updateThread={async (t) => t}
         loadThread={async () => []}
       >
-        <Container logoUrl={logoUrl} agentName="OpenUI">
+        <Container logoUrl={logoUrl} agentName="感知未来">
           <ThreadContainer>
             <Header />
             <ScrollArea>
@@ -181,11 +181,11 @@ export const WithWelcomeScreen = {
         updateThread={async (t) => t}
         loadThread={async () => []}
       >
-        <Container logoUrl={logoUrl} agentName="OpenUI Assistant">
+        <Container logoUrl={logoUrl} agentName="感知未来 Assistant">
           <ThreadContainer>
             <Header />
             <WelcomeScreen
-              title="Hi, I'm OpenUI Assistant"
+              title="Hi, I'm 感知未来 Assistant"
               description="I can help you with questions about your account, products, and more."
               image={{ url: logoUrl }}
             />
@@ -225,7 +225,7 @@ export const WithCustomWelcomeScreen = {
         updateThread={async (t) => t}
         loadThread={async () => []}
       >
-        <Container logoUrl={logoUrl} agentName="OpenUI Assistant">
+        <Container logoUrl={logoUrl} agentName="感知未来 Assistant">
           <ThreadContainer>
             <Header />
             <WelcomeScreen>

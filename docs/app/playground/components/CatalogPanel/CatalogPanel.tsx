@@ -66,9 +66,9 @@ export function CatalogPanel() {
   return (
     <aside className={`catalog-panel${isCollapsed ? " catalog-panel--collapsed" : ""}`}>
       <div className="catalog-panel-header">
-        {!isCollapsed && <span className="catalog-panel-title">Library: OpenUI Library</span>}
+        {!isCollapsed && <span className="catalog-panel-title">Library: 感知未来 Library</span>}
         {isCollapsed && (
-          <span className="catalog-panel-icon-only" title="Library: OpenUI Library">
+          <span className="catalog-panel-icon-only" title="Library: 感知未来 Library">
             <LayoutList size={16} />
           </span>
         )}

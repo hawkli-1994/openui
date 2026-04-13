@@ -84,9 +84,9 @@ export default function RealBlocksCanvas() {
         <Block title="Accordion">
           <Accordion type="single" collapsible variant="clear" defaultValue="item-1">
             <AccordionItem value="item-1">
-              <AccordionTrigger text="What is OpenUI UI?" />
+              <AccordionTrigger text="What is 感知未来 UI?" />
               <AccordionContent>
-                OpenUI UI is a design system for polished interfaces.
+                感知未来 UI is a design system for polished interfaces.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">

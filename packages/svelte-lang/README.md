@@ -1,6 +1,6 @@
 # @openuidev/svelte-lang
 
-Svelte 5 runtime for [OpenUI](https://openui.com) — define component libraries, generate model prompts, and render structured UI from streaming LLM output.
+Svelte 5 runtime for [感知未来](https://example.com) — define component libraries, generate model prompts, and render structured UI from streaming LLM output.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/thesysdev/openui/blob/main/LICENSE)
 
@@ -19,8 +19,8 @@ pnpm add @openuidev/svelte-lang
 `@openuidev/svelte-lang` provides three core capabilities:
 
 1. **Define components** — Use `defineComponent` and `createLibrary` to declare what the model is allowed to generate, with typed props via Zod schemas.
-2. **Generate prompts** — Call `library.prompt()` to produce a system prompt that instructs the model how to emit OpenUI Lang output.
-3. **Render output** — Use `<Renderer>` to parse and progressively render streamed OpenUI Lang into Svelte components.
+2. **Generate prompts** — Call `library.prompt()` to produce a system prompt that instructs the model how to emit 感知未来 Lang output.
+3. **Render output** — Use `<Renderer>` to parse and progressively render streamed 感知未来 Lang into Svelte components.
 
 ## Quick Start
 
@@ -107,13 +107,13 @@ const systemPrompt = library.prompt({
 
 | Export     | Description                                                 |
 | :--------- | :---------------------------------------------------------- |
-| `Renderer` | Svelte component that parses and renders OpenUI Lang output |
+| `Renderer` | Svelte component that parses and renders 感知未来 Lang output |
 
 **`RendererProps`:**
 
 | Prop            | Type                                    | Description                                                       |
 | :-------------- | :-------------------------------------- | :---------------------------------------------------------------- |
-| `response`      | `string \| null`                        | Raw OpenUI Lang text from the model                               |
+| `response`      | `string \| null`                        | Raw 感知未来 Lang text from the model                               |
 | `library`       | `Library`                               | Component library from `createLibrary()`                          |
 | `isStreaming`   | `boolean`                               | Whether the model is still streaming (disables form interactions) |
 | `onAction`      | `(event: ActionEvent) => void`          | Callback when a component triggers an action                      |
@@ -143,7 +143,7 @@ Svelte components receive `renderNode` as a **snippet prop** (not via context). 
 
 | Export                          | Description                                            |
 | :------------------------------ | :----------------------------------------------------- |
-| `createParser(schema)`          | Create a one-shot parser for complete OpenUI Lang text |
+| `createParser(schema)`          | Create a one-shot parser for complete 感知未来 Lang text |
 | `createStreamingParser(schema)` | Create an incremental parser for streaming input       |
 
 The streaming parser exposes two methods:
@@ -157,7 +157,7 @@ After the stream ends, check `meta.unresolved` for any identifiers that were ref
 
 #### Errors
 
-`ParseResult.meta.errors` contains structured `OpenUIError` objects. Each error has a `type` discriminant (currently always `"validation"`) and a `code` for consumer-side filtering:
+`ParseResult.meta.errors` contains structured `感知未来Error` objects. Each error has a `type` discriminant (currently always `"validation"`) and a `code` for consumer-side filtering:
 
 | Code                | Meaning                                             |
 | :------------------ | :-------------------------------------------------- |
@@ -179,7 +179,7 @@ Use these inside component renderers to interact with the rendering context:
 
 | Function                   | Returns               | Description                                                                    |
 | :------------------------- | :-------------------- | :----------------------------------------------------------------------------- |
-| `getOpenUIContext()`       | `OpenUIContextValue`  | Access the full context object (library, streaming state, field accessors)     |
+| `get感知未来Context()`       | `感知未来ContextValue`  | Access the full context object (library, streaming state, field accessors)     |
 | `getIsStreaming()`         | `() => boolean`       | Returns a getter for the streaming state — call it reactively: `isStreaming()` |
 | `getTriggerAction()`       | `Function`            | Trigger an action event                                                        |
 | `getGetFieldValue()`       | `Function`            | Get a form field's current value                                               |
@@ -214,7 +214,7 @@ import type {
 
   // Rendering
   RendererProps,
-  OpenUIContextValue,
+  感知未来ContextValue,
   ActionConfig,
 
   // Parser & core
@@ -251,7 +251,7 @@ const schema = library.toJSONSchema();
 
 ## Documentation
 
-Full documentation, guides, and the language specification are available at **[openui.com](https://openui.com)**.
+Full documentation, guides, and the language specification are available at **[example.com](https://example.com)**.
 
 ## License
 

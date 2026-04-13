@@ -6,7 +6,7 @@ export default function HomePage() {
     <main className={styles.page}>
       <section className={styles.hero}>
         <h1 className={styles.heroTitle}>
-          OpenUI <span className={styles.heroTitleLight}>Design System</span>
+          感知未来 <span className={styles.heroTitleLight}>Design System</span>
         </h1>
         <p className={styles.heroSubtitle}>
           Purpose made for Generative UI.

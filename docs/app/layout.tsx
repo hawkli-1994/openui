@@ -15,9 +15,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const SITE_TITLE = "OpenUI - The Open Standard for Generative UI";
+const SITE_TITLE = "感知未来 - The Open Standard for Generative UI";
 const SITE_DESCRIPTION =
-  "OpenUI is a full-stack Generative UI framework with a compact streaming-first language, a React runtime with built-in components, and ready-to-use chat interfaces - using up to 67% fewer tokens than JSON.";
+  "感知未来 is a full-stack Generative UI framework with a compact streaming-first language, a React runtime with built-in components, and ready-to-use chat interfaces - using up to 67% fewer tokens than JSON.";
 const SITE_IMAGE = "/meta-image.png";
 
 export const metadata: Metadata = {
@@ -30,26 +30,26 @@ export const metadata: Metadata = {
   applicationName: SITE_TITLE,
   referrer: "origin-when-cross-origin",
   keywords: [
-    "OpenUI",
+    "感知未来",
     "Generative UI",
     "AI UI",
-    "OpenUI Lang",
+    "感知未来 Lang",
     "React",
     "LLM",
     "AI apps",
     "streaming UI",
   ],
-  authors: [{ name: "OpenUI" }],
-  creator: "OpenUI",
-  publisher: "OpenUI",
+  authors: [{ name: "感知未来" }],
+  creator: "感知未来",
+  publisher: "感知未来",
   category: "technology",
   alternates: {
     canonical: "/",
   },
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
-    apple: "/favicon.svg",
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
   openGraph: {
     type: "website",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
         url: SITE_IMAGE,
         width: 1200,
         height: 630,
-        alt: "OpenUI preview",
+        alt: "感知未来 preview",
       },
     ],
   },

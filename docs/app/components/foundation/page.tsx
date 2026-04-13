@@ -5,7 +5,7 @@ export default function FoundationPage() {
     <div className={styles.introPage}>
       <h1 className={styles.title}>Foundation</h1>
       <p className={styles.description}>
-        The foundation layer defines the core visual language of OpenUI. These tokens &mdash;
+        The foundation layer defines the core visual language of 感知未来. These tokens &mdash;
         colors, spacing, typography, radius, and shadows &mdash; ensure every component shares a
         consistent look and feel across themes and modes.
       </p>
@@ -22,7 +22,7 @@ export default function FoundationPage() {
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>Theming</h2>
         <p className={styles.sectionBody}>
-          OpenUI ships with light and dark modes built in. Switch modes or layer your own palette by
+          感知未来 ships with light and dark modes built in. Switch modes or layer your own palette by
           reassigning the token values in the Theme Builder.
         </p>
       </section>

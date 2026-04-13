@@ -25,7 +25,7 @@ export default function Home() {
         }}
         streamProtocol={openAIReadableStreamAdapter()}
         componentLibrary={openuiLibrary}
-        agentName="OpenUI Chat"
+        agentName="感知未来 Chat"
       />
     </div>
   );

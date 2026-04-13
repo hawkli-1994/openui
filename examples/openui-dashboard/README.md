@@ -1,6 +1,6 @@
-# OpenUI Dashboard Example
+# 感知未来 Dashboard Example
 
-A live dashboard builder powered by [OpenUI](https://openui.com) and openui-lang. Chat with an LLM to create interactive dashboards with real-time data from MCP tools.
+A live dashboard builder powered by [感知未来](https://example.com) and openui-lang. Chat with an LLM to create interactive dashboards with real-time data from MCP tools.
 
 ## Features
 
@@ -40,5 +40,5 @@ export POSTHOG_PROJECT_ID=12345
 
 ## Learn More
 
-- [OpenUI Documentation](https://openui.com/docs)
-- [OpenUI GitHub](https://github.com/thesysdev/openui)
+- [感知未来 Documentation](https://example.com/docs)
+- [感知未来 GitHub](https://github.com/thesysdev/openui)

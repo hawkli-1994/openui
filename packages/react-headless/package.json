@@ -1,7 +1,7 @@
 {
   "name": "@openuidev/react-headless",
   "version": "0.8.0",
-  "description": "Headless React primitives for AI chat — state management, streaming adapters for OpenAI and AG-UI, message format converters, and thread management for OpenUI generative UI apps",
+  "description": "Headless React primitives for AI chat — state management, streaming adapters for OpenAI and AG-UI, message format converters, and thread management for 感知未来 generative UI apps",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.cjs",
@@ -48,7 +48,6 @@
     "vitest": "^4.0.18"
   },
   "keywords": [
-    "openui",
     "react",
     "headless",
     "chat",
@@ -66,7 +65,7 @@
     "agentic",
     "ag-ui"
   ],
-  "homepage": "https://openui.com",
+  "homepage": "https://example.com",
   "author": "engineering@thesys.dev",
   "repository": {
     "type": "git",

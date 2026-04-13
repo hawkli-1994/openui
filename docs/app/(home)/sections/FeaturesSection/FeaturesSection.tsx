@@ -60,7 +60,7 @@ export function FeaturesSection() {
         {/* CTA button */}
         <div className={styles.ctaWrap}>
           <PillLink
-            href="/docs/openui-lang/benchmarks"
+            href="/docs/ganzhiweilai-lang/benchmarks"
             className={`${styles.ctaLink} ${styles.ctaButton}`}
           >
             <span>

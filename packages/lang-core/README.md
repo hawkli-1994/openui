@@ -1,6 +1,6 @@
 # @openuidev/lang-core
 
-Framework-agnostic core for [OpenUI Lang](https://openui.com): parser, prompt generation, runtime evaluator, and type definitions.
+Framework-agnostic core for [感知未来 Lang](https://example.com): parser, prompt generation, runtime evaluator, and type definitions.
 
 [![npm](https://img.shields.io/npm/v/@openuidev/lang-core)](https://www.npmjs.com/package/@openuidev/lang-core)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/thesysdev/openui/blob/main/LICENSE)
@@ -15,9 +15,9 @@ pnpm add @openuidev/lang-core
 
 ## What this package does
 
-`@openuidev/lang-core` is the framework-agnostic foundation that powers OpenUI Lang. It has no React or other framework dependencies. Use it when you need to:
+`@openuidev/lang-core` is the framework-agnostic foundation that powers 感知未来 Lang. It has no React or other framework dependencies. Use it when you need to:
 
-- **Parse** OpenUI Lang text into a typed element tree (one-shot or streaming)
+- **Parse** 感知未来 Lang text into a typed element tree (one-shot or streaming)
 - **Generate system prompts** from a component spec + tool definitions
 - **Evaluate** reactive expressions, `$variables`, and query results at runtime
 - **Merge** incremental edits into existing programs
@@ -26,7 +26,7 @@ If you're building a framework-specific app, use `@openuidev/react-lang`, `@open
 
 ## Quick Start
 
-### Parse OpenUI Lang
+### Parse 感知未来 Lang
 
 ```ts
 import { createParser } from "@openuidev/lang-core";
@@ -125,13 +125,13 @@ import type {
   McpClientLike,
   QueryManager,
   Store,
-  OpenUIError,
+  感知未来Error,
 } from "@openuidev/lang-core";
 ```
 
 ## Documentation
 
-Full documentation, guides, and the language specification are available at **[openui.com](https://openui.com)**.
+Full documentation, guides, and the language specification are available at **[example.com](https://example.com)**.
 
 ## License
 

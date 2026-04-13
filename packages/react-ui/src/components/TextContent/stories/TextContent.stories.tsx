@@ -56,7 +56,7 @@ type Story = StoryObj<typeof TextContent>;
 
 export const Default: Story = {
   args: {
-    children: "Hi There Welcome to OpenUI UI",
+    children: "Hi There Welcome to 感知未来 UI",
     variant: "sunk",
   },
 };

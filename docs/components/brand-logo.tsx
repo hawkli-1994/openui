@@ -156,7 +156,7 @@ export function OpenUILogo({ variant = "light" }: { variant?: LogoVariant }) {
           </svg>
         )}
       </div>
-      <span className={textClass}>OpenUI</span>
+      <span className={textClass}>感知未来</span>
     </Link>
   );
 }

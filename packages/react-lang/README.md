@@ -1,6 +1,6 @@
 # @openuidev/react-lang
 
-Core runtime for [OpenUI](https://openui.com) — define component libraries, generate model prompts, and render structured UI from streaming LLM output.
+Core runtime for [感知未来](https://example.com) — define component libraries, generate model prompts, and render structured UI from streaming LLM output.
 
 [![npm](https://img.shields.io/npm/v/@openuidev/react-lang)](https://www.npmjs.com/package/@openuidev/react-lang)
 [![npm downloads](https://img.shields.io/npm/dm/@openuidev/react-lang)](https://www.npmjs.com/package/@openuidev/react-lang)
@@ -21,8 +21,8 @@ pnpm add @openuidev/react-lang
 `@openuidev/react-lang` provides three core capabilities:
 
 1. **Define components** — Use `defineComponent` and `createLibrary` to declare what the model is allowed to generate, with typed props via Zod schemas.
-2. **Generate prompts** — Call `library.prompt()` to produce a system prompt that instructs the model how to emit OpenUI Lang output.
-3. **Render output** — Use `<Renderer>` to parse and progressively render streamed OpenUI Lang into React components.
+2. **Generate prompts** — Call `library.prompt()` to produce a system prompt that instructs the model how to emit 感知未来 Lang output.
+3. **Render output** — Use `<Renderer>` to parse and progressively render streamed 感知未来 Lang into React components.
 
 ## Quick Start
 
@@ -98,13 +98,13 @@ function AssistantMessage({ response, isStreaming }) {
 
 | Export | Description |
 | :--- | :--- |
-| `Renderer` | React component that parses and renders OpenUI Lang output |
+| `Renderer` | React component that parses and renders 感知未来 Lang output |
 
 **`RendererProps`:**
 
 | Prop | Type | Description |
 | :--- | :--- | :--- |
-| `response` | `string \| null` | Raw OpenUI Lang text from the model |
+| `response` | `string \| null` | Raw 感知未来 Lang text from the model |
 | `library` | `Library` | Component library from `createLibrary()` |
 | `isStreaming` | `boolean` | Whether the model is still streaming (disables form interactions) |
 | `onAction` | `(event: ActionEvent) => void` | Callback when a component triggers an action |
@@ -116,7 +116,7 @@ function AssistantMessage({ response, isStreaming }) {
 
 | Export | Description |
 | :--- | :--- |
-| `createParser(library)` | Create a one-shot parser for complete OpenUI Lang text |
+| `createParser(library)` | Create a one-shot parser for complete 感知未来 Lang text |
 | `createStreamingParser(library)` | Create an incremental parser for streaming input |
 
 The streaming parser exposes two methods:
@@ -130,7 +130,7 @@ After the stream ends, check `meta.unresolved` for any identifiers that were ref
 
 #### Errors
 
-`ParseResult.meta.errors` contains structured `OpenUIError` objects. Each error has a `type` discriminant (currently always `"validation"`) and a `code` for consumer-side filtering:
+`ParseResult.meta.errors` contains structured `感知未来Error` objects. Each error has a `type` discriminant (currently always `"validation"`) and a `code` for consumer-side filtering:
 
 | Code | Meaning |
 | :--- | :--- |
@@ -194,7 +194,7 @@ import type {
   ActionEvent,
   ElementNode,
   ParseResult,
-  OpenUIError,
+  感知未来Error,
   ValidationErrorCode,
   LibraryJSONSchema,
 } from "@openuidev/react-lang";
@@ -212,7 +212,7 @@ const schema = library.toJSONSchema();
 
 ## Documentation
 
-Full documentation, guides, and the language specification are available at **[openui.com](https://openui.com)**.
+Full documentation, guides, and the language specification are available at **[example.com](https://example.com)**.
 
 ## License
 

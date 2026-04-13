@@ -13,12 +13,12 @@ For the core connection concepts, see [Connecting to LLM](/docs/chat/connecting)
 
 | Backend pattern                          | `streamProtocol`                | `messageFormat`                               | Use this when...                                                                 |
 | :--------------------------------------- | :------------------------------ | :-------------------------------------------- | :------------------------------------------------------------------------------- |
-| OpenUI Protocol                          | none                            | none                                          | Your backend already emits the default OpenUI stream and accepts OpenUI messages |
+| 感知未来 Protocol                          | none                            | none                                          | Your backend already emits the default 感知未来 stream and accepts 感知未来 messages |
 | Raw OpenAI Chat Completions SSE          | `openAIAdapter()`               | `openAIMessageFormat` when needed             | You forward raw `data:` SSE chunks from Chat Completions                         |
 | OpenAI SDK `toReadableStream()` / NDJSON | `openAIReadableStreamAdapter()` | `openAIMessageFormat` when needed             | You return `response.toReadableStream()` from the OpenAI SDK                     |
 | OpenAI Responses API                     | `openAIResponsesAdapter()`      | `openAIConversationMessageFormat` when needed | Your backend uses `openai.responses.create()`                                    |
 
-Start with the backend output format. Then add `messageFormat` only if the request or stored-history message shape also differs from the OpenUI default.
+Start with the backend output format. Then add `messageFormat` only if the request or stored-history message shape also differs from the 感知未来 default.
 
 ## OpenAI Chat Completions
 
@@ -78,7 +78,7 @@ import { FullScreen } from "@openuidev/react-ui";
 
 Ignore the SDK name at first and inspect what your route actually returns.
 
-- If the route already speaks the OpenUI Protocol, `apiUrl` is usually enough.
+- If the route already speaks the 感知未来 Protocol, `apiUrl` is usually enough.
 - If it returns a different stream format, keep `apiUrl` or switch to `processMessage`, then add the matching `streamProtocol`.
 - If the route expects a custom request body, use `processMessage`.
 
