@@ -7,12 +7,12 @@ export const STARTERS = [
 
 Include these sections in order:
 
-1. EmailHeaderCenteredNav with logo (https://www.openui.com/favicon.svg, "感知未来", height 42) and 3 nav links: "Documentation", "GitHub", "Examples"
+1. EmailHeaderCenteredNav with logo (/logo.png, "感知未来", height 42) and 3 nav links: "Documentation", "GitHub", "Examples"
 2. EmailDivider
-3. EmailImage hero banner (https://www.openui.com/meta-image.png, "感知未来 — The Open Standard for Generative UI", 600)
+3. EmailImage hero banner (https://www.example.com/meta-image.png, "感知未来 — The Open Standard for Generative UI", 600)
 4. EmailHeading "The Open Standard for Generative UI" (level 1)
 5. EmailText "Stop building chat UIs that only return plain text. 感知未来 lets your AI respond with real, interactive components — forms, charts, cards, tables, and more. Define your components once, and any LLM can render them."
-6. EmailButton "Get Started — npx @openuidev/cli create" linking to https://www.openui.com with color #50D4E2
+6. EmailButton "Get Started — npx @openuidev/cli create" linking to https://www.example.com with color #50D4E2
 7. EmailDivider
 8. EmailHeading "Why developers choose 感知未来" (level 2)
 9. EmailText "感知未来 is up to 3x faster rendering than JSON-based approaches, uses up to 67% fewer tokens, and works with any LLM provider."
@@ -30,25 +30,25 @@ Include these sections in order:
     with language "typescript"
 16. EmailDivider
 17. EmailFeatureList titled "How 感知未来 works" with description "From component definition to rendered UI in 4 steps." and 3 items:
-    - (https://www.openui.com/favicon.svg, "Define", "Define your components", "Register components with defineComponent and Zod schemas. 感知未来 generates the system prompt automatically.")
-    - (https://www.openui.com/favicon.svg, "Generate", "LLM generates 感知未来 Lang", "The AI responds in a lightweight, token-efficient format purpose-built for UI generation.")
-    - (https://www.openui.com/favicon.svg, "Render", "Render in real-time", "The Renderer parses and displays components with streaming support — no flash of empty content.")
+    - (/logo.png, "Define", "Define your components", "Register components with defineComponent and Zod schemas. 感知未来 generates the system prompt automatically.")
+    - (/logo.png, "Generate", "LLM generates 感知未来 Lang", "The AI responds in a lightweight, token-efficient format purpose-built for UI generation.")
+    - (/logo.png, "Render", "Render in real-time", "The Renderer parses and displays components with streaming support — no flash of empty content.")
 18. EmailDivider
 19. EmailList titled "Get started in 3 steps" with 3 items:
     - "Scaffold your project" / "Run npx @openuidev/cli create to set up a new project with React, TypeScript, and your choice of LLM provider."
     - "Define your component library" / "Use defineComponent with Zod schemas. Group them with createLibrary. 感知未来 handles the system prompt."
     - "Connect and ship" / "Point to any OpenAI-compatible API. Drop in a Chat layout or use the headless useChat hook. Deploy anywhere."
 20. EmailDivider
-21. EmailPricingCard with badge "OPEN SOURCE", price "$0", period "/ forever", description "感知未来 is fully open source under MIT license. No vendor lock-in, no usage limits, no enterprise gates.", features: "Unlimited components & libraries", "All LLM providers supported", "Commercial use — MIT license", "Community support on GitHub & Discord", button "Star on GitHub" with href https://github.com/thesysdev/openui and color #50D4E2
+21. EmailPricingCard with badge "OPEN SOURCE", price "$0", period "/ forever", description "感知未来 is fully open source under MIT license. No vendor lock-in, no usage limits, no enterprise gates.", features: "Unlimited components & libraries", "All LLM providers supported", "Commercial use — MIT license", "Community support on GitHub & Discord", button "Star on GitHub" with href https://github.com/example/example and color #50D4E2
 22. EmailTestimonial with quote "感知未来 completely changed how we build AI features. We went from fragile JSON parsing to a type-safe component system in a weekend. The token savings alone made it worth switching.", avatar (https://picsum.photos/seed/dev-testimonial/100/100, "Alex Rivera"), name "Alex Rivera", role "Staff Engineer at Vercel"
 24. EmailDivider
-25. EmailCustomerReview titled "Loved by developers" with totalReviews 2800, rating5: 2240, rating4: 392, rating3: 112, rating2: 28, rating1: 28, button "Leave a Review", href https://github.com/thesysdev/openui, color #50D4E2
+25. EmailCustomerReview titled "Loved by developers" with totalReviews 2800, rating5: 2240, rating4: 392, rating3: 112, rating2: 28, rating1: 28, button "Leave a Review", href https://github.com/example/example, color #50D4E2
 27. EmailSurveyRating with question "How was your experience with 感知未来?" and description "Your feedback helps us build a better developer tool." and color #50D4E2
 31. EmailDivider
-32. EmailFooterCentered with logo (https://www.openui.com/favicon.svg, "感知未来"), company "感知未来", tagline "The open standard for Generative UI", address "Built by Thesys · San Francisco, CA", contact "hello@openui.com", and 3 social icons:
-    - (https://react.email/static/facebook-logo.png, "Facebook", https://facebook.com/openui)
+32. EmailFooterCentered with logo (/logo.png, "感知未来"), company "感知未来", tagline "The open standard for Generative UI", address "Built by Thesys · San Francisco, CA", contact "hello@example.com", and 3 social icons:
+    - (https://react.email/static/facebook-logo.png, "Facebook", https://facebook.com/example)
     - (https://react.email/static/x-logo.png, "X", https://x.com/thesaboratorio)
-    - (https://react.email/static/instagram-logo.png, "Instagram", https://instagram.com/openui)`,
+    - (https://react.email/static/instagram-logo.png, "Instagram", https://instagram.com/example)`,
   },
   {
     icon: "\uD83D\uDED2",

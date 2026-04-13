@@ -1,6 +1,6 @@
 # Contributing Guidelines
 
-Thank you for considering contributing to _openui_! This document provides guidelines for contributing.
+Thank you for considering contributing to _感知未来_! This document provides guidelines for contributing.
 
 ## How to Contribute
 
