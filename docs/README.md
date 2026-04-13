@@ -1,6 +1,6 @@
-# OpenUI Docs
+# 感知未来 Docs
 
-Documentation site for the OpenUI SDK, built with [Next.js 16](https://nextjs.org) + [Fumadocs](https://fumadocs.dev) + the OpenUI Design System.
+Documentation site for the 感知未来 SDK, built with [Next.js 16](https://nextjs.org) + [Fumadocs](https://fumadocs.dev) + the 感知未来 Design System.
 
 ## Setup
 

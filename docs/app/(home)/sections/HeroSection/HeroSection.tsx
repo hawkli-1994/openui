@@ -116,7 +116,7 @@ function AnnouncementBanner({ className = "" }: { className?: string }) {
 function GitHubBanner({ className = "" }: { className?: string }) {
   return (
     <a
-      href="https://github.com/openui/openui"
+      href="https://github.com/example/example"
       target="_blank"
       rel="noopener noreferrer"
       className={`${styles.heroBanner} ${styles.mobileGithubButton} ${className}`.trim()}

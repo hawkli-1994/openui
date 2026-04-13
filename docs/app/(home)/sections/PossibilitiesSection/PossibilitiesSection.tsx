@@ -25,7 +25,7 @@ const CARDS: readonly CardImageSet[] = [
     title: "Conversational Apps",
     lightImage: "/homepage/conversational-apps-light.png",
     darkImage: "/homepage/conversational-apps-dark.png",
-    href: "https://github.com/openui/openui/tree/main/examples/openui-chat",
+    href: "https://github.com/example/example/tree/main/examples/openui-chat",
   },
   {
     title: "Dashboards & Web-apps",
@@ -36,7 +36,7 @@ const CARDS: readonly CardImageSet[] = [
     title: "Mobile Apps",
     lightImage: "/homepage/mobile-light.png",
     darkImage: "/homepage/mobile-dark.png",
-    href: "https://github.com/openui/openui/tree/main/examples/openui-react-native",
+    href: "https://github.com/example/example/tree/main/examples/openui-react-native",
   },
   {
     title: "Bottom trays",

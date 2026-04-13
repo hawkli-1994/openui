@@ -127,7 +127,7 @@ export function DocsNavbar({ showSidebarToggle = false }: { showSidebarToggle?: 
                   </svg>
                 </Link>
                 <ThemeToggle />
-                <GitHubStarButton repo="openui/openui" />
+                <GitHubStarButton repo="example/example" />
               </div>
             </div>
           }

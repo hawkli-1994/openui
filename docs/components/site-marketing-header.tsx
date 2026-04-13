@@ -94,7 +94,7 @@ function MobileMenu({ starCount, onClose }: { starCount: number | null; onClose:
         </div>
         <div className={styles.mobileGithubButtonWrap}>
           <a
-            href="https://github.com/openui/openui"
+            href="https://github.com/example/example"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.mobileGithubButton}
@@ -121,7 +121,7 @@ export function SiteMarketingHeader({
 }: SiteMarketingHeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(borderMode === "always");
-  const starCount = useGitHubStarCount("openui/openui");
+  const starCount = useGitHubStarCount("example/example");
   const { resolvedTheme } = useTheme();
   const resolvedBrandVariant = brandVariant ?? (resolvedTheme === "dark" ? "dark" : "light");
 
@@ -165,7 +165,7 @@ export function SiteMarketingHeader({
               />
             )}
             {extraActions}
-            <GitHubStarButton repo="openui/openui" isScrolled={isBordered} />
+            <GitHubStarButton repo="example/example" isScrolled={isBordered} />
           </div>
         }
         mobileEnd={

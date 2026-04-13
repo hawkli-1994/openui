@@ -212,7 +212,7 @@ function Frame29() {
   return (
     <div className="content-stretch flex gap-[17px] items-center relative shrink-0 w-[334.235px]">
       <p className="flex-[1_0_0] font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[1.15] min-h-px min-w-px not-italic relative text-[11.797px] text-black tracking-[-0.3686px] whitespace-pre-wrap">
-        Without OpenUI
+        Without 感知未来
       </p>
       <Frame30 />
     </div>
@@ -1303,7 +1303,7 @@ function Frame31() {
   return (
     <div className="absolute content-stretch flex gap-[5px] items-start left-[280px] top-[90px]">
       <p className="font-['Inter_Display:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[14px] text-black">
-        Without OpenUI
+        Without 感知未来
       </p>
       <Group />
     </div>
@@ -1337,7 +1337,7 @@ function Frame32() {
         </div>
       </div>
       <p className="font-['Inter_Display:Regular',sans-serif] leading-[1.2] not-italic relative shrink-0 text-[14px] text-black">
-        With OpenUI
+        With 感知未来
       </p>
     </div>
   );

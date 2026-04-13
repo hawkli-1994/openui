@@ -179,7 +179,7 @@ export default function OpenUiGeneratesSchema() {
   return (
     <div
       className="overflow-clip relative rounded-[16px] size-full"
-      data-name="OpenUI generates prompt"
+      data-name="感知未来 generates prompt"
     >
       <Group />
       <Frame2 />

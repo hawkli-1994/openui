@@ -315,7 +315,7 @@ export default function LlmRespondsInOpenUiLang() {
   return (
     <div
       className="overflow-clip relative rounded-[16px] size-full"
-      data-name="LLM responds in OpenUI lang"
+      data-name="LLM responds in 感知未来 lang"
     >
       <Group />
       <div className="absolute bottom-0 left-1/2 right-1/2 top-[3.7%]" data-name="Vector">

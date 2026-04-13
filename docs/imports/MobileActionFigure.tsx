@@ -201,7 +201,7 @@ function Frame27() {
   return (
     <div className="content-stretch flex gap-[10.687px] items-center relative shrink-0 w-[210.114px]">
       <p className="flex-[1_0_0] font-['Inter:Semi_Bold',sans-serif] font-semibold leading-[1.15] min-h-px min-w-px not-italic relative text-[7.416px] text-black tracking-[-0.2317px] whitespace-pre-wrap">
-        Without OpenUI
+        Without 感知未来
       </p>
       <Frame28 />
     </div>
@@ -1277,10 +1277,10 @@ function Frame29() {
       <div className="-translate-x-1/2 absolute bg-[#f1f1f2] blur-[12.95px] h-[68px] left-[calc(50%+0.5px)] rounded-[99px] top-[98px] w-[109px]" />
       <Before1 />
       <p className="absolute font-['Inter_Display:Regular',sans-serif] leading-[1.2] left-[calc(50%-35px)] not-italic text-[10px] text-black top-[3px]">
-        Without OpenUI
+        Without 感知未来
       </p>
       <p className="absolute font-['Inter_Display:Regular',sans-serif] leading-[1.2] left-[calc(50%-28px)] not-italic text-[10px] text-black text-shadow-[0px_4px_11.4px_white] top-[128px]">
-        With OpenUI
+        With 感知未来
       </p>
     </div>
   );
